@@ -19,6 +19,8 @@ import Dashboard from "views/Dashboard.js";
 import Map from "views/Map.js";
 import TableList from "views/TableList.js";
 import Typography from "views/Typography.js";
+import CommoditiesDashboard from "views/CommoditiesDashboard.js";
+import WaterDashboard from "views/WaterDashboard";
 
 var routes = [
   {
@@ -56,5 +58,19 @@ var routes = [
     component: <Typography />,
     layout: "/admin",
   },
+  {
+    path: "/commodities",
+    name: "Commodities",
+    icon: "tim-icons icon-chart-pie-36",
+    component: <CommoditiesDashboard />,
+    layout: "/admin",
+  },
+  {
+    path: "/water",
+    name: "Water",
+    icon: "tim-icons icon-chart-pie-36",
+    component: <WaterDashboard />,
+    layout: "/admin",
+  }
 ];
 export default routes;

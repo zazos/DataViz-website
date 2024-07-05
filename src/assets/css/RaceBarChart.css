@@ -1,0 +1,78 @@
+/* src/views/RaceBarChart.css */
+.race-bar-chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    fill: #fff; /* Change title color to white */
+  }
+  
+  .month-label {
+    font-size: 34px; /* Increase month label font size */
+    font-weight: bold;
+    fill: #fff; /* Change month label color to white */
+  }
+  
+  .axis-label text {
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold; /* Make axis text bolder */
+    fill: #fff;
+  }
+  
+  .bar-label {
+    font-size: 15px;
+    font-family: 'Arial', sans-serif;
+    fill: #fff; /* Change bar label color to white */
+  }
+  
+  .legend text {
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    fill: #fff; /* Change legend text color to white */
+  }
+  
+  #slider {
+    position: absolute;
+    top: 50px; /* Adjust this value as needed to align the slider */
+    right: 22px; /* Adjust this value as needed to align the slider */
+    width: 380px; /* Adjust the width as needed */
+    height: 8px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #4b83ec; /* Change background to a solid color */
+    border-radius: 5px; /* Add border radius */
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    margin-top: 10px; /* Adjust this value to position the slider vertically */
+  }
+  
+  #slider:hover {
+    opacity: 1;
+  }
+  
+  #slider::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #fff; /* Change thumb color to white */
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  #slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #fff; /* Change thumb color to white */
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  }
+  

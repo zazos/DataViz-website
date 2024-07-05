@@ -1,0 +1,24 @@
+/* src/assets/css/ComparisonBarChart.css */
+.bar-palestine {
+    fill: #ff7f0e;
+  }
+  
+  .bar-europe {
+    fill: #1f77b4;
+  }
+  
+  .axis-label {
+    font: 10px sans-serif;
+  }
+  
+  .label-palestine,
+  .label-europe {
+    fill: white;
+    text-anchor: start;
+  }
+  
+  .legend-comparison text {
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    fill: #fff; /* Change legend text color to white */
+  }
