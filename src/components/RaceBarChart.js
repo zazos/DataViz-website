@@ -67,8 +67,8 @@ const RaceBarChart = ({ csvFilePath, conversionRate }) => {
   }
 
   useEffect(() => {
-    const margin = { top: 50, right: 30, bottom: 60, left: 200 };
-    const width = 1200 - margin.left - margin.right;
+    const margin = { top: 50, right: 30, bottom: 60, left: 210 };
+    const width = 1400 - margin.left - margin.right;
     const height = 600 - margin.top - margin.bottom;
 
     const svg = d3.select(svgRef.current)

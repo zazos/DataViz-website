@@ -1,0 +1,55 @@
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .commodities-dashboard .event-section {
+    background: #f8f9fa00; /* Light grey background for readability */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 20px; /* Space between sections */
+    padding: 20px; /* Inner padding */
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 1s forwards; /* Apply the animation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  }
+  
+  .commodities-dashboard .event-section h3 {
+    color: #007bff; /* Blue heading */
+    font-weight: bold; /* Bold text */
+    margin-top: 0; /* Remove top margin */
+  }
+  
+  .commodities-dashboard .event-section p {
+    margin: 10px 0; /* Vertical space between paragraphs */
+    line-height: 1.6; /* Increased line height for readability */
+  }
+  
+  .commodities-dashboard .event-section p strong {
+    color: #ffffff; /* Darker color for strong text */
+  }
+  
+  .commodities-dashboard .event-section .card-category a {
+    color: #007bff; /* Blue links */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .commodities-dashboard .event-section:hover {
+    /* Enhanced hover effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+    transform: translateY(-5px); /* Slight upward movement */
+    background: #2887e62d; /* Slightly darker background for contrast */
+  }
+  
+  /* New styles for card titles */
+  .card-chart .card-title {
+    color: #007bff;
+    font-weight: bold;
+  }
+  

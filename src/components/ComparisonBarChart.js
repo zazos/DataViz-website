@@ -6,17 +6,6 @@ const ComparisonBarChart = ({ palestineCsvFilePath, europeanCsvFilePath, convers
   const svgRef = useRef();
   const titleRef = useRef();
 
-  const categoryColors = {
-    'Staple Foods': '#66c2a5',
-    'Meat and Dairy Products': '#fc8d62',
-    'Fresh Produce': '#8da0cb',
-    'Water': '#e78ac3',
-    'Oils and Fats': '#a6d854',
-    'Fuel': '#ffd92f',
-    'Travel Expenses': '#e5c494',
-    'Cigarettes': '#b3b3b3'
-  };
-
   const commodityCategories = {
     'rice (1 kg)': 'Staple Foods',
     'flour (50 kg)': 'Staple Foods',
@@ -62,12 +51,12 @@ const ComparisonBarChart = ({ palestineCsvFilePath, europeanCsvFilePath, convers
     'Potable water (1000 litres)': 'Water'
   };
 
-  const palestineColor = '#ff7f0e';
-  const europeColor = '#1f77b4';
+  const palestineColor = '#fc8d62';
+  const europeColor = '#8da0cb';
 
   useEffect(() => {
-    const margin = { top: 50, right: 30, bottom: 60, left: 300 };
-    const width = 1200 - margin.left - margin.right;
+    const margin = { top: 50, right: 30, bottom: 60, left: 210 };
+    const width = 1400 - margin.left - margin.right;
     const height = 600 - margin.top - margin.bottom;
 
     // Clear the previous SVG content
@@ -167,7 +156,7 @@ const ComparisonBarChart = ({ palestineCsvFilePath, europeanCsvFilePath, convers
             .sort((a, b) => b.Deviation - a.Deviation)
             .slice(0, 10);  // Limit to top 10 commodities with highest deviation
 
-          x.domain([0, d3.max(mergedData, d => Math.max(d.PalestinePrice, d.EuropePrice) + 50)]);
+          x.domain([0, d3.max(mergedData, d => Math.max(d.PalestinePrice, d.EuropePrice) + 20)]);
           y.domain(mergedData.map(d => d.Commodity));
 
           xAxis.transition().duration(500).call(d3.axisBottom(x).ticks(10).tickFormat(d3.format(',.2f')));
@@ -259,8 +248,8 @@ const ComparisonBarChart = ({ palestineCsvFilePath, europeanCsvFilePath, convers
         .attr('class', 'legend-comparison')
         .attr('transform', (d, i) => `translate(0,${i * 25 + 220})`); // Adjust vertical spacing if needed
 
-        const legendRectSize = 20; // Define the size of the legend rectangle
-        const legendSpacing = 5; // Define spacing between rectangle and text
+        const legendRectSize = 18; // Define the size of the legend rectangle
+        const legendSpacing = 6; // Define spacing between rectangle and text
 
         legendComparison.append('rect')
             .attr('x', width - legendRectSize)
