@@ -86,7 +86,7 @@ function CommoditiesDashboard(props) {
         </Row>
 
         <Row>
-          <Col lg="6">
+          <Col lg="12">
             <Card>
               <CardHeader>
                 <CardTitle tag="h2">The 7-Month-Timeline</CardTitle>
@@ -118,14 +118,7 @@ function CommoditiesDashboard(props) {
                     <p><strong>Commodity Impact:</strong> Despite the ceasefire, prices for essentials like flour remained extremely high ($222.75 in December), showing that the supply chain issues were far from resolved.</p>
                   </div>
                 )}
-              </CardBody>
-            </Card>
-          </Col>
-          <Col lg="6">
-            {isSecondColumnVisible && (
-              <Card>
-                <CardBody className="commodities-dashboard">
-                  {visibleSections.includes(3) && (
+                {visibleSections.includes(3) && (
                     <div className="event-section">
                       <h3>Yemen Airstrikes (12 January 2024 – 6 May 2024)</h3>
                       <p><strong>Event Overview:</strong> The conflict expanded with airstrikes in Yemen, reflecting a broader regional impact and involvement of multiple actors including Iran-backed groups. This period saw continued fighting and significant humanitarian challenges in Gaza.</p>
@@ -139,9 +132,8 @@ function CommoditiesDashboard(props) {
                       <p><strong>Commodity Impact:</strong> By February and March, prices for cigarettes and fuel saw significant increases (e.g., gasoline $37.35 in February, $47.25 in March), and staple food prices like flour and sugar remained high. This phase indicates the extended impact on both luxury and essential goods due to sustained conflict and blockades.</p>
                     </div>
                   )}
-                </CardBody>
-              </Card>
-            )}
+              </CardBody>
+            </Card>
           </Col>
         </Row>
 

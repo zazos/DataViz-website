@@ -2,8 +2,8 @@ import { createContext } from "react";
 
 export const backgroundColors = {
   primary: "primary",
-  red: "red",
-  green: "green",
+  blue: "blue",
+  green: "green"
 };
 
 export const BackgroundColorContext = createContext({

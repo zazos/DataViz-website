@@ -18,16 +18,17 @@
 import Dashboard from "views/Dashboard.js";
 import Map from "views/Map.js";
 import TableList from "views/TableList.js";
-import Typography from "views/Typography.js";
+import Home from "views/Home.js";
 import CommoditiesDashboard from "views/CommoditiesDashboard.js";
 import WaterDashboard from "views/WaterDashboard";
+import Typography from "views/Typography";
 
 var routes = [
   {
-    path: "/typography",
+    path: "/home",
     name: "Home",
     icon: "tim-icons icon-align-center",
-    component: <Typography />,
+    component: <Home />,
     layout: "/admin",
   },
   {
