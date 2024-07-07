@@ -19,16 +19,11 @@ import React from "react";
 
 // reactstrap components
 import { Card, CardHeader, CardBody, CardTitle, Row, Col } from "reactstrap";
-import "../assets/css/typography.css"; // Import the custom CSS file with unique names
 
 function Typography() {
   return (
     <>
-      <div className="custom-content">
-        <div className="custom-image-text">
-          #FreePalestine
-        </div>
-      </div>
+
     </>
   );
 }
