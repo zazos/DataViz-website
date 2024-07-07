@@ -3,10 +3,11 @@
 .custom-content {
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: top;
   justify-content: center;
-  margin-left: 130px;
-  min-height: 100vh;
+  padding-top: 10px;
+  padding-left: 220px;
+  min-height: 20vh;
   font-family: "Red Hat Display", sans-serif;
 }
 
@@ -29,4 +30,48 @@
   to {
     background-size: 30%;
   }
+}
+
+.content-row {
+  margin-top: 42px;
+  padding-left: 280px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* Ensure all children align to the same height */
+}
+
+.abstract-card, .video-card, .target-audience-card, .reasons-card {
+  width: 48%;
+  margin: 1%;
+  display: flex;
+  flex-direction: column;
+}
+
+.abstract-card p, .target-audience-card p, .reasons-card p {
+  font-size: 1.3em;
+  font-family: 'Arial', sans-serif;
+}
+
+.logos-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px; /* Reduced margin */
+}
+
+.logos-section span {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.logo {
+  width: 40px;
+  height: auto;
+  margin: 0 8px;
+}
+
+.icon {
+  margin-right: 10px;
+  font-size: 1.5em;
 }

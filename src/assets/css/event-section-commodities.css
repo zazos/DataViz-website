@@ -27,6 +27,8 @@
   }
   
   .commodities-dashboard .event-section p {
+    font-size: 1.3em;
+    font-family: 'Arial', sans-serif; /* Standard font family */
     margin: 10px 0; /* Vertical space between paragraphs */
     line-height: 1.6; /* Increased line height for readability */
   }

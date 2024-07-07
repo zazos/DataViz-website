@@ -1,4 +1,3 @@
-// src/views/RaceBarChart.js
 import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
 import '../assets/css/RaceBarChart.css'; 
@@ -67,7 +66,7 @@ const RaceBarChart = ({ csvFilePath, conversionRate }) => {
   }
 
   useEffect(() => {
-    const margin = { top: 50, right: 30, bottom: 60, left: 210 };
+    const margin = { top: 50, right: 100, bottom: 60, left: 210 }; // Adjusted right margin to provide space for labels
     const width = 1400 - margin.left - margin.right;
     const height = 600 - margin.top - margin.bottom;
 
@@ -176,12 +175,12 @@ const RaceBarChart = ({ csvFilePath, conversionRate }) => {
 
         labels.enter().append('text')
           .attr('class', 'bar-label')
-          .attr('x', d => x(d.value) - 55)
+          .attr('x', d => x(d.value) + 5) // Move labels outside the bars
           .attr('y', d => y(d.Commodity) + y.bandwidth() / 2 + 4)
           .text(d => `$${d3.format(',.2f')(d.value)}`)
           .merge(labels)
           .transition().duration(500)
-          .attr('x', d => x(d.value) - 55)
+          .attr('x', d => x(d.value) + 5) // Move labels outside the bars
           .attr('y', d => y(d.Commodity) + y.bandwidth() / 2 + 4)
           .text(d => `$${d3.format(',.2f')(d.value)}`);
 
