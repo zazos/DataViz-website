@@ -79,7 +79,7 @@ function CommoditiesDashboard(props) {
               </CardHeader>
               <CardBody>
                 <RaceBarChart csvFilePath={commodityPrices} conversionRate={0.27} currentMonth={raceMonth} onMonthChange={handleRaceMonthChange} />
-                <p style={{ width: '1500px', margin: '0 auto', textAlign: 'center' }}>*Prices are converted to USD for comparison</p>
+                <p className="text-muted" style={{ width: '1500px', margin: '0 auto', textAlign: 'center' }}>*Prices are converted to USD for comparison</p>
               </CardBody>
             </Card>
           </Col>
@@ -189,8 +189,8 @@ function CommoditiesDashboard(props) {
                   conversionRate={0.27}
                   selectedMonth={comparisonMonth}
                 />
-                <p style={{ width: '1500px', margin: '0 auto', textAlign: 'center' }}>*Prices are converted to USD for comparison</p>
-                <p style={{ width: '1500px', margin: '0 auto', textAlign: 'center'}}>**European data has been averaged by many European Countries (2022-2024)</p>
+                <p className="text-muted" style={{ width: '1500px', margin: '0 auto', textAlign: 'center' }}>*Prices are converted to USD for comparison</p>
+                <p className="text-muted" style={{ width: '1500px', margin: '0 auto', textAlign: 'center'}}>**European data has been averaged by many European Countries (2022-2024)</p>
               </CardBody>
             </Card>
           </Col>

@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Red+Hat+Display:900&display=swap');
+
+.custom-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 130px;
+  min-height: 100vh;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.custom-image-text {
+  font-size: 10vw;
+  font-weight: 900;
+  background: url('https://cscr.pk/wp-content/uploads/2023/11/The-Unfinished-Story-of-Nakba-and-the-Palestinian-Struggle-for-Justice.jpg');
+  background-size: 40%;
+  background-position: 50% 50%;
+  -webkit-background-clip: text;
+  color: hsla(0, 0%, 0%, 0.08);
+  animation: custom-zoomout 10s ease 500ms forwards;
+  text-align: center;
+}
+
+@keyframes custom-zoomout {
+  from {
+    background-size: 40%;
+  }
+  to {
+    background-size: 30%;
+  }
+}
