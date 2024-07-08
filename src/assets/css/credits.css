@@ -1,0 +1,56 @@
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.rounded-circle {
+    border-radius: 50%;
+}
+
+.team-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.linkedin-logo {
+    width: 32px;
+    height: 32px;
+}
+
+.team-card-title {
+    margin-top: 1rem;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: 'Arial', sans-serif;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.team-card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.our-team-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.image-wrapper {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}

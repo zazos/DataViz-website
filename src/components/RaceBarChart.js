@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
-import '../assets/css/RaceBarChart.css'; 
+import '../assets/css/RaceBarChart.css';
 
 const RaceBarChart = ({ csvFilePath, conversionRate }) => {
   const svgRef = useRef();
@@ -66,8 +66,8 @@ const RaceBarChart = ({ csvFilePath, conversionRate }) => {
   }
 
   useEffect(() => {
-    const margin = { top: 50, right: 100, bottom: 60, left: 210 }; // Adjusted right margin to provide space for labels
-    const width = 1400 - margin.left - margin.right;
+    const margin = { top: 50, right: 100, bottom: 60, left: 245 }; // Adjusted right margin to provide space for labels
+    const width = 1200 - margin.left - margin.right;
     const height = 600 - margin.top - margin.bottom;
 
     const svg = d3.select(svgRef.current)

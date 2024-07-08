@@ -79,7 +79,7 @@ function CommoditiesDashboard(props) {
               </CardHeader>
               <CardBody>
                 <RaceBarChart csvFilePath={commodityPrices} conversionRate={0.27} currentMonth={raceMonth} onMonthChange={handleRaceMonthChange} />
-                <p className="text-muted" style={{ width: '1500px', margin: '0 auto', textAlign: 'center' }}>*Prices are converted to USD for comparison</p>
+                <p className="text-muted" style={{ width: '1820px', margin: '0 auto', textAlign: 'center' }}>*Prices are converted to USD for comparison</p>
               </CardBody>
             </Card>
           </Col>
@@ -90,7 +90,7 @@ function CommoditiesDashboard(props) {
             <Card>
               <CardHeader>
                 <CardTitle tag="h2">The 7-Month-Timeline</CardTitle>
-                <h5 className="card-category">sources: 
+                <h5 className="card-category">sources:
                   <a href="https://en.wikipedia.org/wiki/Timeline_of_the_Israel%E2%80%93Hamas_war"> Wikipedia</a>,
                   <a href="https://www.dw.com/en/escalation-in-the-middle-east-israel-hamas-war-chronology/a-67361568"> DW</a>,
                   <a href="https://www.britannica.com/event/Israel-Hamas-War"> Britannica</a>
@@ -105,11 +105,11 @@ function CommoditiesDashboard(props) {
                   </div>
                 )}
                 {visibleSections.includes(1) && (
-                <div className="event-section">
-                  <h3>Invasion of the Gaza Strip (28 October – 23 November 2023)</h3>
-                  <p><strong>Event Overview:</strong> Israel initiated a ground invasion of Gaza, further intensifying the conflict. Significant events included Israeli airstrikes on schools and hospitals, heavy fighting in urban areas, and the destruction of critical infrastructure​.</p>
-                  <p><strong>Commodity Impact:</strong> During this period, gas prices soared to $102.60 in November, and flour prices rose sharply, indicating severe disruptions in fuel and food supply chains.</p>
-                </div>
+                  <div className="event-section">
+                    <h3>Invasion of the Gaza Strip (28 October – 23 November 2023)</h3>
+                    <p><strong>Event Overview:</strong> Israel initiated a ground invasion of Gaza, further intensifying the conflict. Significant events included Israeli airstrikes on schools and hospitals, heavy fighting in urban areas, and the destruction of critical infrastructure​.</p>
+                    <p><strong>Commodity Impact:</strong> During this period, gas prices soared to $102.60 in November, and flour prices rose sharply, indicating severe disruptions in fuel and food supply chains.</p>
+                  </div>
                 )}
                 {visibleSections.includes(2) && (
                   <div className="event-section">
@@ -119,19 +119,19 @@ function CommoditiesDashboard(props) {
                   </div>
                 )}
                 {visibleSections.includes(3) && (
-                    <div className="event-section">
-                      <h3>Yemen Airstrikes (12 January 2024 – 6 May 2024)</h3>
-                      <p><strong>Event Overview:</strong> The conflict expanded with airstrikes in Yemen, reflecting a broader regional impact and involvement of multiple actors including Iran-backed groups. This period saw continued fighting and significant humanitarian challenges in Gaza.</p>
-                      <p><strong>Commodity Impact:</strong> January saw flour prices peak at $276.75, and sugar prices also increased substantially, reflecting ongoing and worsening shortages of basic commodities.</p>
-                    </div>
-                  )}
-                  {visibleSections.includes(4) && (
-                    <div className="event-section">
-                      <h3>Rafah Offensive (7 May 2024 – Present)</h3>
-                      <p><strong>Event Overview:</strong> The conflict saw a new phase with the Rafah offensive, focusing on strategic locations and involving intense fighting. This period is characterized by attempts to control key entry points and routes in and out of Gaza. </p>
-                      <p><strong>Commodity Impact:</strong> By February and March, prices for cigarettes and fuel saw significant increases (e.g., gasoline $37.35 in February, $47.25 in March), and staple food prices like flour and sugar remained high. This phase indicates the extended impact on both luxury and essential goods due to sustained conflict and blockades.</p>
-                    </div>
-                  )}
+                  <div className="event-section">
+                    <h3>Yemen Airstrikes (12 January 2024 – 6 May 2024)</h3>
+                    <p><strong>Event Overview:</strong> The conflict expanded with airstrikes in Yemen, reflecting a broader regional impact and involvement of multiple actors including Iran-backed groups. This period saw continued fighting and significant humanitarian challenges in Gaza.</p>
+                    <p><strong>Commodity Impact:</strong> January saw flour prices peak at $276.75, and sugar prices also increased substantially, reflecting ongoing and worsening shortages of basic commodities.</p>
+                  </div>
+                )}
+                {visibleSections.includes(4) && (
+                  <div className="event-section">
+                    <h3>Rafah Offensive (7 May 2024 – Present)</h3>
+                    <p><strong>Event Overview:</strong> The conflict saw a new phase with the Rafah offensive, focusing on strategic locations and involving intense fighting. This period is characterized by attempts to control key entry points and routes in and out of Gaza. </p>
+                    <p><strong>Commodity Impact:</strong> By February and March, prices for cigarettes and fuel saw significant increases (e.g., gasoline $37.35 in February, $47.25 in March), and staple food prices like flour and sugar remained high. This phase indicates the extended impact on both luxury and essential goods due to sustained conflict and blockades.</p>
+                  </div>
+                )}
               </CardBody>
             </Card>
           </Col>
@@ -144,7 +144,7 @@ function CommoditiesDashboard(props) {
                 <Row>
                   <Col className="text-left" sm="6">
                     <CardTitle tag="h2">Commodity Prices: Europe vs Palestine</CardTitle>
-                    <h5 className="card-category">sources: 
+                    <h5 className="card-category">sources:
                       <a href="https://www.numbeo.com/cost-of-living/country_price_rankings?itemId=17&region=150&displayCurrency=EUR"> Numbeo</a>,
                       <a href="https://www.brusselstimes.com/787140/cigarettes-to-cost-twice-as-much-in-belgium-as-in-luxembourg-next-year"> BrusselsTimes</a>,
                       <a href="https://worldpopulationreview.com/country-rankings/bottled-water-cost-by-country"> WorldPopulationReview</a>,
@@ -181,8 +181,8 @@ function CommoditiesDashboard(props) {
                   conversionRate={0.27}
                   selectedMonth={comparisonMonth}
                 />
-                <p className="text-muted" style={{ width: '1500px', margin: '0 auto', textAlign: 'center' }}>*Prices are converted to USD for comparison</p>
-                <p className="text-muted" style={{ width: '1500px', margin: '0 auto', textAlign: 'center'}}>**European data has been averaged by many European Countries (2022-2024)</p>
+                <p className="text-muted" style={{ width: '1820px', margin: '0 auto', textAlign: 'center' }}>*Prices are converted to USD for comparison</p>
+                <p className="text-muted" style={{ width: '1585px', margin: '0 auto', textAlign: 'center' }}>**European data has been averaged by many European Countries (2022-2024)</p>
               </CardBody>
             </Card>
           </Col>

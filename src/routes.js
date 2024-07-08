@@ -15,13 +15,11 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import Dashboard from "views/Dashboard.js";
 import Map from "views/Map.js";
-import TableList from "views/TableList.js";
 import Home from "views/Home.js";
 import CommoditiesDashboard from "views/CommoditiesDashboard.js";
 import WaterDashboard from "views/WaterDashboard";
-import Typography from "views/Typography";
+import Credits from "views/Credits";
 
 var routes = [
   {
@@ -32,13 +30,6 @@ var routes = [
     layout: "/admin",
   },
   {
-    path: "/dashboard",
-    name: "Dashboard",
-    icon: "tim-icons icon-chart-pie-36",
-    component: <Dashboard />,
-    layout: "/admin",
-  },
-  {
     path: "/map",
     name: "Map",
     icon: "tim-icons icon-pin",
@@ -46,17 +37,10 @@ var routes = [
     layout: "/admin",
   },
   {
-    path: "/tables",
-    name: "Table List",
-    icon: "tim-icons icon-puzzle-10",
-    component: <TableList />,
-    layout: "/admin",
-  },
-  {
-    path: "/typography",
+    path: "/credits",
     name: "Credits",
     icon: "tim-icons icon-align-center",
-    component: <Typography />,
+    component: <Credits />,
     layout: "/admin",
   },
   {

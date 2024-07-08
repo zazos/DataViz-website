@@ -55,8 +55,8 @@ const ComparisonBarChart = ({ palestineCsvFilePath, europeanCsvFilePath, convers
   const europeColor = '#8da0cb';
 
   useEffect(() => {
-    const margin = { top: 50, right: 30, bottom: 60, left: 210 };
-    const width = 1400 - margin.left - margin.right;
+    const margin = { top: 50, right: 135, bottom: 60, left: 205 };
+    const width = 1200 - margin.left - margin.right;
     const height = 600 - margin.top - margin.bottom;
 
     // Clear the previous SVG content
@@ -243,26 +243,26 @@ const ComparisonBarChart = ({ palestineCsvFilePath, europeanCsvFilePath, convers
         updateChart(selectedMonth);
 
         const legendComparison = svg.selectAll('.legend-comparison')
-        .data(['Palestine', 'Europe'])
-        .enter().append('g')
-        .attr('class', 'legend-comparison')
-        .attr('transform', (d, i) => `translate(0,${i * 25 + 220})`); // Adjust vertical spacing if needed
+          .data(['Palestine', 'Europe'])
+          .enter().append('g')
+          .attr('class', 'legend-comparison')
+          .attr('transform', (d, i) => `translate(0,${i * 25 + 220})`); // Adjust vertical spacing if needed
 
         const legendRectSize = 18; // Define the size of the legend rectangle
         const legendSpacing = 6; // Define spacing between rectangle and text
 
         legendComparison.append('rect')
-            .attr('x', width - legendRectSize)
-            .attr('width', legendRectSize)
-            .attr('height', legendRectSize)
-            .style('fill', (d, i) => i === 0 ? palestineColor : europeColor);  // Use Palestine and Europe colors
+          .attr('x', width - legendRectSize)
+          .attr('width', legendRectSize)
+          .attr('height', legendRectSize)
+          .style('fill', (d, i) => i === 0 ? palestineColor : europeColor);  // Use Palestine and Europe colors
 
         legendComparison.append('text')
-            .attr('x', width - legendRectSize - legendSpacing)
-            .attr('y', legendRectSize / 2)
-            .attr('dy', '.35em')
-            .style('text-anchor', 'end')
-            .text(d => d);
+          .attr('x', width - legendRectSize - legendSpacing)
+          .attr('y', legendRectSize / 2)
+          .attr('dy', '.35em')
+          .style('text-anchor', 'end')
+          .text(d => d);
 
       }).catch(error => {
         console.error("Error loading European data:", error);
