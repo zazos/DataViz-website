@@ -37,20 +37,24 @@
   }
   
   .event-section-map {
-    background-color: #1f1f2e;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    background: #f8f9fa00; /* Light grey background for readability */
+    padding: 20px; /* Inner padding */
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 20px; /* Space between sections */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     transition: background-color 0.3s ease;
     opacity: 0; /* Start hidden */
     animation: fadeIn 1s forwards; /* Apply the animation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
   }
   
   .event-section-map:hover {
-    background-color: #555c70;
+    background: #2887e62d; /* Slightly darker background for contrast */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+    transform: translateY(-5px); /* Slight upward movement */
   }
   
-  .event-section-map h3 {
+  .map-card .event-section-map h3 {
     margin-top: 0;
     color: #007bff; /* Matching title color */
     font-weight: bold; /* Matching title font weight */
