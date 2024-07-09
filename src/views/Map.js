@@ -171,7 +171,6 @@ const MapWrapper = () => {
       .append('svg')
       .attr('width', 180)
       .attr('height', 120)
-      .selectAll('g')
       .data(colorScale.range().map(d => {
         const r = colorScale.invertExtent(d);
         if (!r[0]) r[0] = 0;
@@ -221,7 +220,7 @@ const MapWrapper = () => {
             >
               {year}
             </Button>
-            ))}
+          ))}
         </ButtonGroup>
       </div>
       <div id="chart-container" style={{ display: 'flex', alignItems: 'flex-start' }}>
@@ -236,22 +235,71 @@ const MapWrapper = () => {
   );
 };
 
-const InfoCard = () => (
-  <Card className="map-card">
-    <CardBody>
-      <CardTitle tag="h2" className="map-title">History of Attacks</CardTitle>
-      <h5 className="card-category" style={{ marginTop: '10px' }}>source: <a href="https://www.history.com/topics/middle-east/palestine">History</a></h5>
-      <ul className="map-paragraph">
-        <li><strong>2016:</strong> A wave of violence marked by individual stabbings, shootings, and car-ramming attacks, mostly carried out by young Palestinians. This period is often referred to as the "Knife Intifada" or "Jerusalem Intifada".</li>
-        <li><strong>2018:</strong> Starting in March, weekly protests known as the "Great March of Return" were held along the Gaza-Israel border. These protests often turned violent, with Israeli forces using live ammunition against protesters, resulting in numerous casualties.</li>
-        <li><strong>2021:</strong> An 11-day conflict in May between Israel and Hamas, triggered by tensions in Jerusalem, particularly around the Al-Aqsa Mosque and eviction threats in Sheikh Jarrah. This conflict saw extensive rocket fire from Gaza and Israeli airstrikes, leading to a significant number of casualties on both sides.</li>
-        <li><strong>2022:</strong> In August, over 1,000 rockets were fired at Israel by Palestinian Islamic Jihad during a three-day conflict. This operation included the targeted killing of PIJ commander Tayseer al-Jabari and ended with a ceasefire. Hamas did not participate in this conflict.</li>
-        <li><strong>2023:</strong> On October 7, Hamas launched a large-scale attack involving rockets and ground incursions into Israeli territory. This attack led to significant Israeli military responses, marking one of the deadliest escalations in recent years.</li>
-        <li><strong>2024:</strong> Hostilities have persisted into 2024, with various skirmishes and military operations continuing between Israeli forces and Palestinian groups, contributing to ongoing instability and violence in the region.</li>
-      </ul>
-    </CardBody>
-  </Card>
-);
+const InfoCard = () => {
+  const [visibleSections, setVisibleSections] = useState([]);
+
+  useEffect(() => {
+    const eventSections = [
+      "Knife Intifada (2016)",
+      "Great March of Return Protests (2018)",
+      "Conflict Over Jerusalem (2021)",
+      "Operation Breaking Dawn (2022)",
+      "Hamas-Israel Conflict (2023)",
+      "Ongoing Hostilities (2024)"
+    ];
+
+    eventSections.forEach((_, index) => {
+      setTimeout(() => {
+        setVisibleSections(prev => [...prev, index]);
+      }, index * 1000); // delay each section by 1 second
+    });
+  }, []);
+
+  return (
+    <Card className="map-card">
+      <CardBody>
+        <CardTitle tag="h2" className="map-title">Most Significant Attacks</CardTitle>
+        <h5 className="card-category" style={{ marginTop: '10px' }}>source: <a href="https://www.history.com/topics/middle-east/palestine">History</a></h5>
+        {visibleSections.includes(0) && (
+          <div className="event-section-map">
+            <h3>Knife Intifada (2016)</h3>
+            <p>A wave of violence marked by individual stabbings, shootings, and car-ramming attacks, mostly carried out by young Palestinians. This period is often referred to as the "Knife Intifada" or "Jerusalem Intifada".</p>
+          </div>
+        )}
+        {visibleSections.includes(1) && (
+          <div className="event-section-map">
+            <h3>Great March of Return Protests (2018)</h3>
+            <p>Starting in March, weekly protests known as the "Great March of Return" were held along the Gaza-Israel border. These protests often turned violent, with Israeli forces using live ammunition against protesters, resulting in numerous casualties.</p>
+          </div>
+        )}
+        {visibleSections.includes(2) && (
+          <div className="event-section-map">
+            <h3>Conflict Over Jerusalem (2021)</h3>
+            <p>An 11-day conflict in May between Israel and Hamas, triggered by tensions in Jerusalem, particularly around the Al-Aqsa Mosque and eviction threats in Sheikh Jarrah. This conflict saw extensive rocket fire from Gaza and Israeli airstrikes, leading to a significant number of casualties on both sides.</p>
+          </div>
+        )}
+        {visibleSections.includes(3) && (
+          <div className="event-section-map">
+            <h3>Operation Breaking Dawn (2022)</h3>
+            <p>In August, over 1,000 rockets were fired at Israel by Palestinian Islamic Jihad during a three-day conflict. This operation included the targeted killing of PIJ commander Tayseer al-Jabari and ended with a ceasefire. Hamas did not participate in this conflict.</p>
+          </div>
+        )}
+        {visibleSections.includes(4) && (
+          <div className="event-section-map">
+            <h3>Hamas-Israel Conflict (2023)</h3>
+            <p>On October 7, Hamas launched a large-scale attack involving rockets and ground incursions into Israeli territory. This attack led to significant Israeli military responses, marking one of the deadliest escalations in recent years.</p>
+          </div>
+        )}
+        {visibleSections.includes(5) && (
+          <div className="event-section-map">
+            <h3>Ongoing Hostilities (2024)</h3>
+            <p>Hostilities have persisted into 2024, with various skirmishes and military operations continuing between Israeli forces and Palestinian groups, contributing to ongoing instability and violence in the region.</p>
+          </div>
+        )}
+      </CardBody>
+    </Card>
+  );
+};
 
 function Map() {
   return (
