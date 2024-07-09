@@ -648,6 +648,3 @@ def toilet_plot():
 
     fig_json = pio.to_json(fig)
     return jsonify(fig_json)
-
-if __name__ == '__main__':
-    app.run(debug=True)

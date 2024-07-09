@@ -8,7 +8,7 @@ const WaterTankChart = () => {
   const [plotFrames, setPlotFrames] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/water_tank_plot')
+    axios.get('https://dataviz-website-restless-sound-977.fly.dev/water_tank_plot')
       .then(response => {
         console.log('Plot data received:', response.data);
         const fig = JSON.parse(response.data);
