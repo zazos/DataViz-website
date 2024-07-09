@@ -204,8 +204,11 @@ const MapWrapper = () => {
 
   return (
     <div>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-        <CardTitle tag="h2" className="map-title">Events and Fatalities Map</CardTitle>
+      <div style={{ marginBottom: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div>
+          <CardTitle tag="h2" className="map-title">Events and Fatalities Map</CardTitle>
+          <h5 className="card-category" style={{ marginTop: '10px' }}>source: <a href="https://data.humdata.org/group/pse">Humdata</a></h5>
+        </div>
         <ButtonGroup className="btn-group-toggle" data-toggle="buttons">
           {years.map((year) => (
             <Button
@@ -218,11 +221,11 @@ const MapWrapper = () => {
             >
               {year}
             </Button>
-          ))}
+            ))}
         </ButtonGroup>
       </div>
       <div id="chart-container" style={{ display: 'flex', alignItems: 'flex-start' }}>
-      <div id="map" style={{ height: '600px', width: '600px', marginRight: '20px' }}></div>
+        <div id="map" style={{ height: '600px', width: '600px', marginRight: '20px' }}></div>
         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
           <svg id="barChart" width="600" height="400"></svg>
           <div id="legend" style={{ marginTop: '100px' }}></div>
@@ -237,6 +240,7 @@ const InfoCard = () => (
   <Card className="map-card">
     <CardBody>
       <CardTitle tag="h2" className="map-title">History of Attacks</CardTitle>
+      <h5 className="card-category" style={{ marginTop: '10px' }}>source: <a href="https://www.history.com/topics/middle-east/palestine">History</a></h5>
       <ul className="map-paragraph">
         <li><strong>2016:</strong> A wave of violence marked by individual stabbings, shootings, and car-ramming attacks, mostly carried out by young Palestinians. This period is often referred to as the "Knife Intifada" or "Jerusalem Intifada".</li>
         <li><strong>2018:</strong> Starting in March, weekly protests known as the "Great March of Return" were held along the Gaza-Israel border. These protests often turned violent, with Israeli forces using live ammunition against protesters, resulting in numerous casualties.</li>
@@ -273,4 +277,3 @@ function Map() {
 }
 
 export default Map;
-
