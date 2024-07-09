@@ -171,6 +171,7 @@ const MapWrapper = () => {
       .append('svg')
       .attr('width', 180)
       .attr('height', 120)
+      .selectAll('g')
       .data(colorScale.range().map(d => {
         const r = colorScale.invertExtent(d);
         if (!r[0]) r[0] = 0;
