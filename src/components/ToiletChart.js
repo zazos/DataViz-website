@@ -7,7 +7,7 @@ const ToiletChart = () => {
   const [plotLayout, setPlotLayout] = useState(null);
 
   useEffect(() => {
-    axios.get('https://dataviz-website-restless-sound-977.fly.dev/toilet_plot')
+    axios.get('https://dataviz-website.fly.dev/toilet_plot')
       .then(response => {
         console.log('Plot data received:', response.data);
         const fig = JSON.parse(response.data);

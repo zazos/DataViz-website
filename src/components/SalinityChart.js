@@ -7,7 +7,7 @@ const SalinityChart = () => {
   const [plotLayout, setPlotLayout] = useState(null);
 
   useEffect(() => {
-    axios.get('https://dataviz-website-restless-sound-977.fly.dev/plot')
+    axios.get('https://dataviz-website.fly.dev/plot')
       .then(response => {
         console.log('Plot data received:', response.data);
         const fig = JSON.parse(response.data);
