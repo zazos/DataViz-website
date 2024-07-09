@@ -23,6 +23,7 @@
     "react-chartjs-2": "3.3.0",
     "react-csv-reader": "^4.0.0",
     "react-dom": ">=16.8.0",
+    "react-helmet": "^6.1.0",
     "react-notification-alert": "0.0.13",
     "react-plotly.js": "^2.6.0",
     "react-router-dom": "6.11.1",
