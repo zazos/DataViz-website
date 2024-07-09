@@ -1,0 +1,29 @@
+/* map-section.css */
+
+.gray-background {
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .map-paragraph {
+    font-size: 1.3em;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .map-title {
+    color: #007bff; /* Blue heading */
+    font-weight: bold; /* Bold text */
+    font-size: 2em; /* Adjust size as necessary to match */
+    margin: 0;
+  }
+  
+  .map-card {
+    background-color: #1f1f2e; /* Card background color */
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+  }
+  

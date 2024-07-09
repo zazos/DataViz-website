@@ -14,6 +14,7 @@
     "d3": "^7.9.0",
     "d3-dsv": "^3.0.1",
     "d3-fetch": "^3.0.1",
+    "leaflet": "^1.9.4",
     "papaparse": "^5.4.1",
     "perfect-scrollbar": "1.5.5",
     "plotly.js": "^2.33.0",
@@ -52,7 +53,7 @@
     "not op_mini all"
   ],
   "optionalDependencies": {
-    "eslint-plugin-flowtype": "8.0.3",
+    "eslint-plugin-flowtype": "^8.0.3",
     "reactstrap": "^8.10.1"
   },
   "devDependencies": {
