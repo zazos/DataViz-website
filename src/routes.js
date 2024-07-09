@@ -37,13 +37,6 @@ var routes = [
     layout: "/admin",
   },
   {
-    path: "/credits",
-    name: "Credits",
-    icon: "tim-icons icon-align-center",
-    component: <Credits />,
-    layout: "/admin",
-  },
-  {
     path: "/commodities",
     name: "Commodities",
     icon: "tim-icons icon-chart-pie-36",
@@ -55,6 +48,13 @@ var routes = [
     name: "Water",
     icon: "tim-icons icon-chart-pie-36",
     component: <WaterDashboard />,
+    layout: "/admin",
+  },
+  {
+    path: "/credits",
+    name: "Credits",
+    icon: "tim-icons icon-align-center",
+    component: <Credits />,
     layout: "/admin",
   }
 ];
