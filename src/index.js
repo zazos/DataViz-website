@@ -36,7 +36,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <ThemeContextWrapper>
     <BackgroundColorWrapper>
-      <BrowserRouter>
+      <BrowserRouter basename="/DataViz-website">
         <Routes>
           <Route path="/admin/*" element={<AdminLayout />} />
           {/* <Route path="/rtl/*" element={<RTLLayout />} /> */}
