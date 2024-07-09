@@ -14,21 +14,21 @@ function Home() {
         <Col md="6">
           <Card className="abstract-card">
             <CardHeader>
-            <CardTitle tag="h2" style={{ color: "#007bff", fontWeight: "bold" }}>
-              Visualizing the Humanitarian Crisis in Palestine 
-              <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Palestine.svg" alt="Palestinian Flag" style={{ width: '30px', height: 'auto', marginLeft: '10px' }} />
-            </CardTitle>
+              <CardTitle tag="h2" style={{ color: "#007bff", fontWeight: "bold" }}>
+                Visualizing the Humanitarian Crisis in Palestine
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Palestine.svg" alt="Palestinian Flag" style={{ width: '30px', height: 'auto', marginLeft: '10px' }} />
+              </CardTitle>
             </CardHeader>
             <CardBody>
               <p>
                 Our website is dedicated to providing insightful data visualizations on the Palestinian conflicts and humanitarian crisis from October 2023 to April 2024.
               </p>
               <p>
-                Focusing on the Gaza Strip and West Bank, we present detailed visualizations of conflict-related events and fatalities, 
+                Focusing on the Gaza Strip and West Bank, we present detailed visualizations of conflict-related events and fatalities,
                 analyze commodity prices in Palestine compared to Europe, and highlight critical water quality and availability issues.
               </p>
               <p>
-                Through interactive maps, time-series charts, and comparative infographics, we aim to offer a clear, unbiased depiction of these pressing issues, 
+                Through interactive maps, time-series charts, and comparative infographics, we aim to offer a clear, unbiased depiction of these pressing issues,
                 fostering a deeper understanding and encouraging informed dialogue and action.
               </p>
             </CardBody>
@@ -72,7 +72,7 @@ function Home() {
         <Col md="6">
           <Card className="reasons-card">
             <CardHeader>
-              <CardTitle tag="h2" style={{ color: "#007bff", fontWeight: "bold" }}>Why This Theme?</CardTitle>
+              <CardTitle tag="h2" style={{ color: "#007bff", fontWeight: "bold" }}>Rationale Behind Our Focus</CardTitle>
             </CardHeader>
             <CardBody>
               <p>

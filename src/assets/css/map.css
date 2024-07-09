@@ -1,0 +1,64 @@
+.gray-background {
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .map-paragraph {
+    font-size: 1.3em;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .map-title {
+    color: #007bff; /* Blue heading */
+    font-weight: bold; /* Bold text */
+    font-size: 2em; /* Adjust size as necessary to match */
+    margin: 0;
+  }
+  
+  .map-card {
+    background-color: #1f1f2e; /* Card background color */
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .event-section-map {
+    background-color: #1f1f2e;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 1s forwards; /* Apply the animation */
+  }
+  
+  .event-section-map:hover {
+    background-color: #555c70;
+  }
+  
+  .event-section-map h3 {
+    margin-top: 0;
+    color: #007bff; /* Matching title color */
+    font-weight: bold; /* Matching title font weight */
+    font-size: 1.5em; /* Matching title size */
+  }
+  
+  .event-section-map p {
+    color: #ccc;
+    font-size: 1.1em; /* Matching text size */
+  }
+  
