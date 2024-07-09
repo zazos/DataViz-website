@@ -197,7 +197,7 @@ def water_tank_plot():
                 ],
                 "direction": "left",
                 "pad": {"r": 10, "t": 87},
-                "showactive": False,
+                "showactive": True,
                 "type": "buttons",
                 "x": 0.5,
                 "xanchor": "center",
@@ -359,7 +359,7 @@ def water_availability_gaza_plot():
                 ],
                 "direction": "left",
                 "pad": {"r": 10, "t": 87},
-                "showactive": False,
+                "showactive": True,
                 "type": "buttons",
                 "x": 0.5,
                 "xanchor": "center",
@@ -540,7 +540,7 @@ def water_availability_world_plot():
                 ],
                 "direction": "left",
                 "pad": {"r": 10, "t": 87},
-                "showactive": False,
+                "showactive": True,
                 "type": "buttons",
                 "x": 0.5,
                 "xanchor": "center",
@@ -559,7 +559,7 @@ def water_availability_world_plot():
 
 @app.route('/toilet_plot')
 def toilet_plot():
-    categories = ['Global Standard for Emergencies', 'Gaza']
+    categories = ['Global Standard for Emergencies', 'Gaza & Rafah']
     values1 = [20]
     values2 = [850]
 
