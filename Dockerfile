@@ -52,12 +52,14 @@ RUN apt-get update -qq && \
     curl -sL https://deb.nodesource.com/setup_20.x | bash - && \
     apt-get install -y nodejs
 
+# Install Python dependencies in the final stage
+RUN pip install -r requirements.txt
+
 # Set environment variables
 ENV NODE_ENV="production"
 ENV FLASK_APP=water.py
 
 # Expose the ports
-EXPOSE 3000
 EXPOSE 5000
 
 # Command to run both servers (Node.js frontend and Flask backend)

@@ -1,5 +1,5 @@
 Flask
-Flask-CORS
+Flask-Cors
+gunicorn
 plotly
 numpy
-gunicorn
