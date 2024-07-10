@@ -54,14 +54,13 @@ function WaterDashboard(props) {
           <Col xs="4">
             <Card className="card-chart" style={{ backgroundColor: '#27293D', color: 'cornflowerblue', height: '95%' }}>
               <CardBody style={{ textAlign: 'justify' }}>
-                <h2 style={{ fontSize: '1.3rem', color: 'cornflowerblue', textAlign: 'left', marginBottom: '1rem' }}>
+                <h2 style={{ fontSize: '1.2rem', color: 'cornflowerblue', textAlign: 'left', marginBottom: '1rem' }}>
                   Health Risks Due to Increased Water Salinity in Gaza
                 </h2>
-                <p style={{ fontSize: '1.2rem', color: 'white' }}>
-                  The scarcity of safe water in Gaza has led Palestinians to consume water from polluted agricultural wells, which are nearly as salty as seawater.<br></br> 
+                <p style={{ fontSize: '1.1rem', color: 'white' }}>
+                 The scarcity of safe water in Gaza has led Palestinians to consume water from polluted agricultural wells, which are nearly as salty as seawater.
                   This water significantly exceeds the safe salinity limits set by the World Health Organization (WHO), posing severe health risks, especially for vulnerable groups such as infants, pregnant women, and those with kidney disease.
-                  Consuming this polluted water also raises the likelihood of disease outbreaks, including diarrhea and cholera.
-                  Furthermore, the lack of electricity and fuel necessary to operate water and sanitation facilities exacerbates the situation, likely leading to an increase in disease spread within Gaza.
+                  Consuming this polluted water also raises the likelihood of disease outbreaks, including diarrhea and cholera. Furthermore, the lack of electricity and fuel necessary to operate water and sanitation facilities exacerbates the situation, likely leading to an increase in disease spread within Gaza.
                 </p>
               </CardBody>
             </Card>
@@ -99,14 +98,13 @@ function WaterDashboard(props) {
           <Col xs="5">
             <Card className="card-chart" style={{ backgroundColor: '#27293D', color: 'cornflowerblue', height: '95%' }}>
               <CardBody style={{ textAlign: 'justify' }}>
-                <h2 style={{ fontSize: '1.3rem', color: 'cornflowerblue', textAlign: 'left', marginBottom: '1rem', fontWeight: 'bold' }}>
+                <h2 style={{ fontSize: '1.2rem', color: 'cornflowerblue', textAlign: 'left', marginBottom: '1rem', fontWeight: 'bold' }}>
                   Critical Water Shortage in Gaza: A Humanitarian Crisis
                 </h2>
-                <p style={{ fontSize: '1.2rem', color: 'white' }}>
+                <p style={{ fontSize: '1.1rem', color: 'white' }}>
                   The water consumption in Palestine is significantly below the average consumption of any continent and even falls short of the World Health Organization's safe limit.
-                  The situation is even worse for people in Gaza with only 3L per day to cover all their needs.<br></br>
-                  Prior to the escalation of violence in October 2023, Palestinians in Gaza already faced severe challenges in accessing clean water.
-                  Gaza’s freshwater resources were contaminated due to the Israeli blockade and repeated bombardments, forcing residents to spend a third or more of their income on water from unregulated sources, hoping it was safe.<br></br> 
+                  The situation is even worse for people in Gaza with only 3L per day to cover all their needs.
+                  Prior to the escalation of violence in October 2023, Palestinians in Gaza already faced severe challenges in accessing clean water. Gaza’s freshwater resources were contaminated due to the Israeli blockade and repeated bombardments, forcing residents to spend a third or more of their income on water from unregulated sources, hoping it was safe.
                   This dire situation has now worsened exponentially, with Palestinians losing almost 97% of their average daily water consumption for essential needs such as hydration, hygiene, and cooking.
                 </p>
               </CardBody>
@@ -145,10 +143,10 @@ function WaterDashboard(props) {
           <Col xs="12">
             <Card className="card-chart" style={{ backgroundColor: '#27293D', color: 'cornflowerblue' }}>
               <CardBody style={{ textAlign: 'justify' }}>
-                <h2 style={{ fontSize: '1.3rem', color: 'cornflowerblue', textAlign: 'left', marginBottom: '1rem', fontWeight: 'bold' }}>
+                <h2 style={{ fontSize: '1.2rem', color: 'cornflowerblue', textAlign: 'left', marginBottom: '1rem', fontWeight: 'bold' }}>
                   Severe Sanitation Crisis in Rafah and Gaza: One Toilet for Every 850 People
                 </h2>
-                <p style={{ fontSize: '1.2rem', color: 'white', textAlign: 'justify' }}>
+                <p style={{ fontSize: '1.1rem', color: 'white', textAlign: 'justify' }}>
                   In Rafah and Gaza, the current situation regarding toilet facilities poses a severe risk of infectious disease due to the alarming ratio of one toilet per 850 people. This vastly exceeds the global humanitarian standard, which recommends a maximum of 20 individuals per toilet during crises to mitigate health risks effectively.
                 </p>
               </CardBody>
