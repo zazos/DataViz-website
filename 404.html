@@ -11,8 +11,8 @@
         var locationPath = locationSegments.join('/');
         var searchParams = window.location.search.replace(/^\?/, '&');
         var hashParams = window.location.hash;
-        var newLocation = '/' + locationPath + searchParams + hashParams;
-        window.location.replace('/DataViz-website?' + newLocation);
+        var newLocation = '/DataViz-website?' + locationPath + searchParams + hashParams;
+        window.location.replace(newLocation);
     </script>
 </head>
 <body>
