@@ -12,7 +12,7 @@
         var searchParams = window.location.search.replace(/^\?/, '&');
         var hashParams = window.location.hash;
         var newLocation = '/' + locationPath + searchParams + hashParams;
-        window.location.replace(newLocation);
+        window.location.replace('/DataViz-website?' + newLocation);
     </script>
 </head>
 <body>
