@@ -1,8 +1,8 @@
-// public/redirect.js
 (function () {
-  const redirectTo = sessionStorage.redirectTo;
-  delete sessionStorage.redirectTo;
-  if (redirectTo && redirectTo !== location.href) {
-    history.replaceState(null, null, redirectTo);
+  const params = new URLSearchParams(window.location.search);
+  const redirectTo = params.get('redirect');
+
+  if (redirectTo && redirectTo !== location.pathname + location.search) {
+    history.replaceState(null, null, redirectTo + location.hash);
   }
 })();
