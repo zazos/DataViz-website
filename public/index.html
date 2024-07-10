@@ -58,6 +58,22 @@
     />
     <title>Black Dashboard React by Creative Tim</title>
     <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> -->
+    <script type="text/javascript">
+      (function () {
+          var search = window.location.search;
+          var params = search ? search.substring(1).split('&') : [];
+          var redirect = null;
+          params.forEach(function (param) {
+              var split = param.split('=');
+              if (split[0] === 'redirect') {
+                  redirect = split[1];
+              }
+          });
+          if (redirect) {
+              window.history.replaceState(null, '', redirect + window.location.hash);
+          }
+      })();
+  </script>
   </head>
   <body>
     <noscript> You need to enable JavaScript to run this app. </noscript>
