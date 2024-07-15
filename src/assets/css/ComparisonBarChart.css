@@ -22,3 +22,13 @@
     font-family: 'Arial', sans-serif;
     fill: #fff; /* Change legend text color to white */
   }
+
+  @media (max-width: 768px) {
+    .axis-label {
+      font: 8px sans-serif;
+    }
+  
+    .legend-comparison text {
+      font-size: 14px;
+    }
+  }

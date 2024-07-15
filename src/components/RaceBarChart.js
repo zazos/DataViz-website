@@ -1,9 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
 import '../assets/css/RaceBarChart.css';
 
 const RaceBarChart = ({ csvFilePath, conversionRate }) => {
   const svgRef = useRef();
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
   const categoryColors = {
     'Staple Foods': '#66c2a5', // Green-Blue
     'Meat and Dairy Products': '#fc8d62', // Orange-Red
@@ -67,12 +69,12 @@ const RaceBarChart = ({ csvFilePath, conversionRate }) => {
 
   useEffect(() => {
     const margin = { top: 50, right: 100, bottom: 60, left: 245 }; // Adjusted right margin to provide space for labels
-    const width = 1200 - margin.left - margin.right;
+    const width = windowWidth - margin.left - margin.right;
     const height = 600 - margin.top - margin.bottom;
 
     const svg = d3.select(svgRef.current)
-      .attr('width', width + margin.left + margin.right)
-      .attr('height', height + margin.top + margin.bottom)
+      .attr('viewBox', `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+      .attr('preserveAspectRatio', 'xMidYMid meet')
       .append('g')
       .attr('transform', `translate(${margin.left},${margin.top})`);
 
@@ -243,6 +245,15 @@ const RaceBarChart = ({ csvFilePath, conversionRate }) => {
         .text(d => d);
     });
 
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    }
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, [csvFilePath, conversionRate]);
 
   return (

@@ -76,3 +76,57 @@
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
   }
   
+  @media (max-width: 1024px) {
+    .title {
+      font-size: 20px;
+    }
+  
+    .month-label {
+      font-size: 28px;
+    }
+  
+    .axis-label text {
+      font-size: 12px;
+    }
+  
+    .bar-label {
+      font-size: 14px;
+    }
+  
+    .legend text {
+      font-size: 16px;
+    }
+  
+    #slider {
+      width: 90%;
+      right: 5%;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .title {
+      font-size: 16px;
+    }
+  
+    .month-label {
+      font-size: 20px;
+    }
+  
+    .axis-label text {
+      font-size: 8px;
+    }
+  
+    .bar-label {
+      font-size: 10px;
+    }
+  
+    .legend text {
+      font-size: 12px;
+    }
+  
+    #slider {
+      width: 80%;
+      right: 10%;
+    }
+  }
+  

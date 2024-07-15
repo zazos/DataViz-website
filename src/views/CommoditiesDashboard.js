@@ -11,6 +11,8 @@ function CommoditiesDashboard(props) {
   const [comparisonMonth, setComparisonMonth] = useState('Sep-23');
   const [visibleSections, setVisibleSections] = useState([]);
   const [isSecondColumnVisible, setIsSecondColumnVisible] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
 
   const handleRaceMonthChange = (month) => {
     setRaceMonth(month);
@@ -38,7 +40,13 @@ function CommoditiesDashboard(props) {
     setTimeout(() => {
       setIsSecondColumnVisible(true);
     }, 3000); // show the second column after 3000ms
+
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  const isSmallScreen = windowWidth < 768;
 
   return (
     <>
@@ -79,7 +87,7 @@ function CommoditiesDashboard(props) {
               </CardHeader>
               <CardBody>
                 <RaceBarChart csvFilePath={commodityPrices} conversionRate={0.27} currentMonth={raceMonth} onMonthChange={handleRaceMonthChange} />
-                <p className="text-muted" style={{ width: '1820px', margin: '0 auto', textAlign: 'center' }}>*Prices are converted to USD for comparison</p>
+                <p className="text-muted" style={{ width: '100%', margin: '0 auto', textAlign: 'center' }}>*Prices are converted to USD for comparison</p>
               </CardBody>
             </Card>
           </Col>
@@ -181,8 +189,8 @@ function CommoditiesDashboard(props) {
                   conversionRate={0.27}
                   selectedMonth={comparisonMonth}
                 />
-                <p className="text-muted" style={{ width: '1820px', margin: '0 auto', textAlign: 'center' }}>*Prices are converted to USD for comparison</p>
-                <p className="text-muted" style={{ width: '1585px', margin: '0 auto', textAlign: 'center' }}>**European data has been averaged by many European Countries (2022-2024)</p>
+                <p className="text-muted" style={{ width: '100%', margin: '0 auto', textAlign: 'center' }}>*Prices are converted to USD for comparison</p>
+                <p className="text-muted" style={{ width: '100%', margin: '0 auto', textAlign: 'center' }}>**European data has been averaged by many European Countries (2022-2024)</p>
               </CardBody>
             </Card>
           </Col>

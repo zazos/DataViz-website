@@ -66,3 +66,16 @@
     font-size: 1.1em; /* Matching text size */
   }
   
+  @media (max-width: 768px) {
+    .map-paragraph {
+      font-size: 1em;
+    }
+  
+    .map-title {
+      font-size: 1.5em;
+    }
+  
+    .event-section-map {
+      padding: 10px;
+    }
+  }

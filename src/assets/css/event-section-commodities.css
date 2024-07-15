@@ -55,3 +55,31 @@
     font-weight: bold;
   }
   
+  @media (max-width: 1024px) {
+    .commodities-dashboard .event-section {
+      padding: 15px;
+    }
+  
+    .commodities-dashboard .event-section p {
+      font-size: 1.2em;
+    }
+  
+    .commodities-dashboard .event-section h3 {
+      font-size: 1.5em;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .commodities-dashboard .event-section {
+      padding: 10px;
+    }
+  
+    .commodities-dashboard .event-section p {
+      font-size: 1em;
+    }
+  
+    .commodities-dashboard .event-section h3 {
+      font-size: 1.2em;
+    }
+  }
+  
