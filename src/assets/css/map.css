@@ -66,6 +66,7 @@
   font-size: 1.1em; /* Matching text size */
 }
 
+/* map.css */
 @media (max-width: 768px) {
   .map-paragraph {
       font-size: 1em;
@@ -90,6 +91,11 @@
 
   #legend {
       margin-top: 20px;
+      font-size: 0.8em; /* Adjust font size */
+      width: 100%; /* Adjust width */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
   }
 }
 
@@ -122,5 +128,10 @@
 
   #legend {
       margin-top: 10px;
+      font-size: 0.7em; /* Further adjust font size for smaller screens */
+      width: 100%; /* Ensure legend takes full width */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
   }
 }
