@@ -6,17 +6,16 @@ function Home() {
   return (
     <>
       <div className="custom-content">
-        <div className="custom-image-text">
-          #FreePalestine
+        <div className="custom-home-header">
+          Visualizing the Humanitarian Crisis in Palestine
         </div>
       </div>
       <Row className="content-row">
-        <Col md="6">
+        <Col md="6" sm="12">
           <Card className="abstract-card">
             <CardHeader>
               <CardTitle tag="h2" style={{ color: "#007bff", fontWeight: "bold" }}>
-                Visualizing the Humanitarian Crisis in Palestine
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Palestine.svg" alt="Palestinian Flag" style={{ width: '30px', height: 'auto', marginLeft: '10px' }} />
+                Abstract
               </CardTitle>
             </CardHeader>
             <CardBody>
@@ -34,7 +33,7 @@ function Home() {
             </CardBody>
           </Card>
         </Col>
-        <Col md="6">
+        <Col md="6" sm="12">
           <Card className="video-card">
             <CardBody>
               <iframe
@@ -51,7 +50,7 @@ function Home() {
         </Col>
       </Row>
       <Row className="content-row">
-        <Col md="6">
+        <Col md="6" sm="12">
           <Card className="target-audience-card">
             <CardHeader>
               <CardTitle tag="h2" style={{ color: "#007bff", fontWeight: "bold" }}>Target Audience</CardTitle>
@@ -69,7 +68,7 @@ function Home() {
             </CardBody>
           </Card>
         </Col>
-        <Col md="6">
+        <Col md="6" sm="12">
           <Card className="reasons-card">
             <CardHeader>
               <CardTitle tag="h2" style={{ color: "#007bff", fontWeight: "bold" }}>Rationale Behind Our Focus</CardTitle>
@@ -92,7 +91,7 @@ function Home() {
         </Col>
       </Row>
       <Row className="content-row">
-        <Col md="12">
+        <Col md="12" sm="12">
           <div className="logos-section">
             <span>Visualizations made with</span>
             <img src="https://raw.githubusercontent.com/d3/d3-logo/master/d3.png" alt="D3.js" className="logo" />

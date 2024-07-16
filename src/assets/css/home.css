@@ -12,7 +12,21 @@
 }
 
 .custom-image-text {
-  font-size: 10vw;
+  font-size: 8vw;
+  font-weight: 900;
+  background: url('https://cscr.pk/wp-content/uploads/2023/11/The-Unfinished-Story-of-Nakba-and-the-Palestinian-Struggle-for-Justice.jpg');
+  background-size: 40%;
+  background-position: 50% 50%;
+  -webkit-background-clip: text;
+  color: hsla(0, 0%, 0%, 0.08);
+  animation: custom-zoomout 10s ease 500ms forwards;
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.custom-home-header {
+  font-size: 5vw;
+  margin-left: 4rem;
   font-weight: 900;
   background: url('https://cscr.pk/wp-content/uploads/2023/11/The-Unfinished-Story-of-Nakba-and-the-Palestinian-Struggle-for-Justice.jpg');
   background-size: 40%;
@@ -39,6 +53,7 @@
   display: flex;
   justify-content: center;
   align-items: stretch; /* Ensure all children align to the same height */
+  flex-wrap: wrap; /* Allow wrapping */
 }
 
 .abstract-card, .video-card, .target-audience-card, .reasons-card {
@@ -58,6 +73,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 10px; /* Reduced margin */
+  flex-wrap: wrap; /* Allow wrapping */
 }
 
 .logos-section span {
@@ -76,7 +92,7 @@
   font-size: 1.5em;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .custom-content {
     padding-left: 10px;
     padding-right: 10px;
@@ -95,5 +111,35 @@
 
   .custom-image-text {
     font-size: 20vw;
+  }
+
+  .custom-home-header {
+    font-size: 10vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .custom-content {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .content-row {
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .abstract-card, .video-card, .target-audience-card, .reasons-card {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .custom-image-text {
+    font-size: 30vw;
+  }
+
+  .custom-home-header {
+    font-size: 15vw;
   }
 }

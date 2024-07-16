@@ -1,27 +1,25 @@
 import React from "react";
-import classNames from "classnames";
-import '../assets/css/credits.css';
-
-import {
-  Card,
-  CardBody,
-  Row,
-  Col,
-} from "reactstrap";
+import "../assets/css/credits.css";
+import { Card, CardBody, Row, Col } from "reactstrap";
 
 const linkedInLogo = "https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png";
 
 function Credits() {
   return (
     <>
+      <div className="custom-content">
+        <div className="custom-image-text">
+          #FreePalestine
+        </div>
+      </div>
       <div className="content">
         <Row className="justify-content-center mb-4">
-          <Col lg="8" className="text-center">
+          <Col lg="8" md="10" sm="12" className="text-center">
             <h2 className="our-team-title" style={{ color: "#007bff", fontWeight: "bold" }}>Our Team</h2>
           </Col>
         </Row>
         <Row>
-          <Col lg="4">
+          <Col lg="4" md="6" sm="12">
             <Card className="team-card-chart">
               <CardBody className="team-card-body text-center">
                 <div className="image-wrapper">
@@ -34,7 +32,7 @@ function Credits() {
               </CardBody>
             </Card>
           </Col>
-          <Col lg="4">
+          <Col lg="4" md="6" sm="12">
             <Card className="team-card-chart">
               <CardBody className="team-card-body text-center">
                 <div className="image-wrapper">
@@ -47,7 +45,7 @@ function Credits() {
               </CardBody>
             </Card>
           </Col>
-          <Col lg="4">
+          <Col lg="4" md="6" sm="12">
             <Card className="team-card-chart">
               <CardBody className="team-card-body text-center">
                 <div className="image-wrapper">
@@ -62,12 +60,12 @@ function Credits() {
           </Col>
         </Row>
         <Row className="justify-content-center mb-4">
-          <Col lg="8" className="text-center">
+          <Col lg="8" md="10" sm="12" className="text-center">
             <h2 className="our-team-title" style={{ color: "#007bff", fontWeight: "bold" }}>Course Consultant</h2>
           </Col>
         </Row>
         <Row className="justify-content-center">
-          <Col lg="4" className="mx-auto">
+          <Col lg="4" md="6" sm="12" className="mx-auto">
             <Card className="team-card-chart">
               <CardBody className="team-card-body text-center">
                 <div className="image-wrapper">

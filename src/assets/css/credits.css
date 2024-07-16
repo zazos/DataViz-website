@@ -55,9 +55,9 @@
     margin-bottom: 1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .team-card-title {
-    font-size: 1.2em;
+    font-size: 1.3em;
   }
 
   .our-team-title {
@@ -67,5 +67,35 @@
   .image-wrapper {
     width: 150px;
     height: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-card-title {
+    font-size: 1.2em;
+  }
+
+  .our-team-title {
+    font-size: 1.8rem;
+  }
+
+  .image-wrapper {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 600px) {
+  .team-card-title {
+    font-size: 1em;
+  }
+
+  .our-team-title {
+    font-size: 1.5rem;
+  }
+
+  .image-wrapper {
+    width: 100px;
+    height: 100px;
   }
 }

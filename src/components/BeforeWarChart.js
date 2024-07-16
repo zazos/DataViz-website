@@ -56,7 +56,7 @@ const BeforeWarChart = () => {
     // Draw the river using the wave path data
     svg.append("path")
         .attr("d", `${wavePathData} L${riverWidth},${riverY + riverHeight} L0,${riverY + riverHeight} Z`)
-        .attr("class", "river");
+        .attr("class", "bwc-river");
 
     // Tank dimensions
     const tankWidth = 200;
@@ -68,11 +68,11 @@ const BeforeWarChart = () => {
     // Draw the tanks with three sides (no top)
     svg.append("path")
         .attr("d", `M${tank1X},${tankY} L${tank1X},${tankY + tankHeight} L${tank1X + tankWidth},${tankY + tankHeight} L${tank1X + tankWidth},${tankY}`)
-        .attr("class", "tank");
+        .attr("class", "bwc-tank");
 
     svg.append("path")
         .attr("d", `M${tank2X},${tankY} L${tank2X},${tankY + tankHeight} L${tank2X + tankWidth},${tankY + tankHeight} L${tank2X + tankWidth},${tankY}`)
-        .attr("class", "tank");
+        .attr("class", "bwc-tank");
 
     // Add water to the tanks
     const water1 = svg.append("rect")
@@ -80,14 +80,14 @@ const BeforeWarChart = () => {
         .attr("y", tankY + tankHeight)
         .attr("width", tankWidth)
         .attr("height", 0)
-        .attr("class", "water");
+        .attr("class", "bwc-water");
 
     const water2 = svg.append("rect")
         .attr("x", tank2X)
         .attr("y", tankY + tankHeight)
         .attr("width", tankWidth)
         .attr("height", 0)
-        .attr("class", "water");
+        .attr("class", "bwc-water");
 
     // Rectangles to visualize water flow from river to tanks
     const rectWidth = 10; // Adjust the width of the rectangles
@@ -177,7 +177,7 @@ const BeforeWarChart = () => {
     function createWaterDrop(cx, cy) {
         const drop = svg.append("path")
             .attr("d", `M${cx},${cy + 20} C${cx - 8},${cy + 35} ${cx + 8},${cy + 35} ${cx},${cy + 60} Q${cx - 8},${cy + 45} ${cx},${cy + 60} C${cx + 8},${cy + 45} ${cx - 8},${cy + 45} ${cx},${cy + 20} Z`)
-            .attr("class", "drop")
+            .attr("class", "bwc-drop")
             .attr("opacity", 0); // Initially hidden
 
         drop.transition()
@@ -188,267 +188,229 @@ const BeforeWarChart = () => {
             .remove(); // Remove drop at the end of the animation
     }
 
+    // Add labels beneath the tanks
+    svg.append("text")
+        .attr("x", tank1X + tankWidth / 2)
+        .attr("y", tankY + tankHeight + 20)
+        .attr("class", "bwc-tank-label")
+        .text("Israel: 80% Water Intake");
 
- // Add labels beneath the tanks
- svg.append("text")
- .attr("x", tank1X + tankWidth / 2)
- .attr("y", tankY + tankHeight + 20)
- .attr("class", "tank-label")
- .text("Israel: 80% Water Intake");
+    svg.append("text")
+        .attr("x", tank2X + tankWidth / 2)
+        .attr("y", tankY + tankHeight + 20)
+        .attr("class", "bwc-tank-label")
+        .text("Palestine: 20% Water Intake");
 
-svg.append("text")
- .attr("x", tank2X + tankWidth / 2)
- .attr("y", tankY + tankHeight + 20)
- .attr("class", "tank-label")
- .text("Palestine: 20% Water Intake");
+    // Add labels above the river
+    const riverLabels = svg.append("g")
+        .attr("class", "bwc-river-labels");
 
+    riverLabels.append("text")
+        .attr("x", riverWidth / 2)
+        .attr("y", riverY + 140) // Adjust for position above the river
+        .attr("class", "bwc-river-label")
+        .text("West Bank Mountain Aquifer");
 
-     // Add labels above the river
-     const riverLabels = svg.append("g")
-     .attr("class", "river-labels");
-
- riverLabels.append("text")
-     .attr("x", riverWidth / 2)
-     .attr("y", riverY + 140) // Adjust for position above the river
-     .attr("class", "river-label")
-     .text("West Bank Mountain Aquifer");
     // Cloud groups to contain multiple circles for each cloud
     const cloudGroup = svg.append("g");
     cloudGroup.append("circle")
-    .attr("cx", 390)
-    .attr("cy", 80)
-    .attr("r", 20)
-    .attr("class", "cloud");
-
-cloudGroup.append("circle")
-    .attr("cx", 470)
-    .attr("cy", 80)
-    .attr("r", 20)
-    .attr("class", "cloud");
-
-cloudGroup.append("circle")
-    .attr("cx", 445)
-    .attr("cy", 70)
-    .attr("r", 20)
-    .attr("class", "cloud");
-
-cloudGroup.append("circle")
-    .attr("cx", 445)
-    .attr("cy", 90)
-    .attr("r", 20)
-    .attr("class", "cloud");
-
-cloudGroup.append("circle")
-    .attr("cx", 415)
-    .attr("cy", 70)
-    .attr("r", 20)
-    .attr("class", "cloud");
-
-cloudGroup.append("circle")
-    .attr("cx", 415)
-    .attr("cy", 80)
-    .attr("r", 20)
-    .attr("class", "cloud");
-
-cloudGroup.append("circle")
-    .attr("cx", 610)
-    .attr("cy", 40)
-    .attr("r", 20)
-    .attr("class", "cloud");
-
-cloudGroup.append("circle")
-    .attr("cx", 690)
-    .attr("cy", 40)
-    .attr("r", 20)
-    .attr("class", "cloud");
-
-cloudGroup.append("circle")
-    .attr("cx", 665)
-    .attr("cy", 30)
-    .attr("r", 20)
-    .attr("class", "cloud");
-
-cloudGroup.append("circle")
-    .attr("cx", 665)
-    .attr("cy", 50)
-    .attr("r", 20)
-    .attr("class", "cloud");
-
-cloudGroup.append("circle")
-    .attr("cx", 635)
-    .attr("cy", 30)
-    .attr("r", 20)
-    .attr("class", "cloud");
-
-cloudGroup.append("circle")
-    .attr("cx", 635)
-    .attr("cy", 50)
-    .attr("r", 20)
-    .attr("class", "cloud");
-
-cloudGroup.append("circle")
-    .attr("cx", 160)
-    .attr("cy", 40)
-    .attr("r", 20)
-    .attr("class", "cloud");
-
-cloudGroup.append("circle")
-    .attr("cx", 80)
-    .attr("cy", 40)
-    .attr("r", 20)
-    .attr("class", "cloud");
-
-cloudGroup.append("circle")
-    .attr("cx", 105)
-    .attr("cy", 30)
-    .attr("r", 20)
-    .attr("class", "cloud");
-
-cloudGroup.append("circle")
-    .attr("cx", 105)
-    .attr("cy", 50)
-    .attr("r", 20)
-    .attr("class", "cloud");
-
-cloudGroup.append("circle")
-    .attr("cx", 135)
-    .attr("cy", 30)
-    .attr("r", 20)
-    .attr("class", "cloud");
-
-cloudGroup.append("circle")
-    .attr("cx", 135)
-    .attr("cy", 50)
-    .attr("r", 20)
-    .attr("class", "cloud");
+        .attr("cx", 390)
+        .attr("cy", 80)
+        .attr("r", 20)
+        .attr("class", "bwc-cloud");
 
     cloudGroup.append("circle")
-    .attr("cx", 415)
-    .attr("cy", 100)
-    .attr("r", 20)
-    .attr("class", "cloud");
-
-cloudGroup.append("circle")
-    .attr("cx", 910)
-    .attr("cy", 80)
-    .attr("r", 20)
-    .attr("class", "cloud");
-
-cloudGroup.append("circle")
-    .attr("cx", 990)
-    .attr("cy", 80)
-    .attr("r", 20)
-    .attr("class", "cloud");
-
-cloudGroup.append("circle")
-    .attr("cx", 965)
-    .attr("cy", 70)
-    .attr("r", 20)
-    .attr("class", "cloud");
-
-cloudGroup.append("circle")
-    .attr("cx", 965)
-    .attr("cy", 90)
-    .attr("r", 20)
-    .attr("class", "cloud");
-
-cloudGroup.append("circle")
-    .attr("cx", 935)
-    .attr("cy", 70)
-    .attr("r", 20)
-    .attr("class", "cloud");
-
-cloudGroup.append("circle")
-    .attr("cx", 935)
-    .attr("cy", 90)
-    .attr("r", 20)
-    .attr("class", "cloud");
-
+        .attr("cx", 470)
+        .attr("cy", 80)
+        .attr("r", 20)
+        .attr("class", "bwc-cloud");
 
     cloudGroup.append("circle")
-    .attr("cx", 910)
-    .attr("cy", 80)
-    .attr("r", 20)
-    .attr("class", "cloud");
-
-cloudGroup.append("circle")
-    .attr("cx", 990)
-    .attr("cy", 80)
-    .attr("r", 20)
-    .attr("class", "cloud");
-
-cloudGroup.append("circle")
-    .attr("cx", 965)
-    .attr("cy", 70)
-    .attr("r", 20)
-    .attr("class", "cloud");
-
-cloudGroup.append("circle")
-    .attr("cx", 965)
-    .attr("cy", 90)
-    .attr("r", 20)
-    .attr("class", "cloud");
-
-cloudGroup.append("circle")
-    .attr("cx", 935)
-    .attr("cy", 70)
-    .attr("r", 20)
-    .attr("class", "cloud");
-
-cloudGroup.append("circle")
-    .attr("cx", 935)
-    .attr("cy", 90)
-    .attr("r", 20)
-    .attr("class", "cloud");
-
+        .attr("cx", 445)
+        .attr("cy", 70)
+        .attr("r", 20)
+        .attr("class", "bwc-cloud");
 
     cloudGroup.append("circle")
-    .attr("cx", 1110)
-    .attr("cy", 40)
-    .attr("r", 20)
-    .attr("class", "cloud");
+        .attr("cx", 445)
+        .attr("cy", 90)
+        .attr("r", 20)
+        .attr("class", "bwc-cloud");
 
-cloudGroup.append("circle")
-    .attr("cx", 1190)
-    .attr("cy", 40)
-    .attr("r", 20)
-    .attr("class", "cloud");
+    cloudGroup.append("circle")
+        .attr("cx", 415)
+        .attr("cy", 70)
+        .attr("r", 20)
+        .attr("class", "bwc-cloud");
 
-cloudGroup.append("circle")
-    .attr("cx", 1165)
-    .attr("cy", 30)
-    .attr("r", 20)
-    .attr("class", "cloud");
+    cloudGroup.append("circle")
+        .attr("cx", 415)
+        .attr("cy", 80)
+        .attr("r", 20)
+        .attr("class", "bwc-cloud");
 
-cloudGroup.append("circle")
-    .attr("cx", 1165)
-    .attr("cy", 50)
-    .attr("r", 20)
-    .attr("class", "cloud");
+    cloudGroup.append("circle")
+        .attr("cx", 610)
+        .attr("cy", 40)
+        .attr("r", 20)
+        .attr("class", "bwc-cloud");
 
-cloudGroup.append("circle")
-    .attr("cx", 1135)
-    .attr("cy", 30)
-    .attr("r", 20)
-    .attr("class", "cloud");
+    cloudGroup.append("circle")
+        .attr("cx", 690)
+        .attr("cy", 40)
+        .attr("r", 20)
+        .attr("class", "bwc-cloud");
 
-cloudGroup.append("circle")
-    .attr("cx", 1135)
-    .attr("cy", 50)
-    .attr("r", 20)
-    .attr("class", "cloud");
+    cloudGroup.append("circle")
+        .attr("cx", 665)
+        .attr("cy", 30)
+        .attr("r", 20)
+        .attr("class", "bwc-cloud");
 
+    cloudGroup.append("circle")
+        .attr("cx", 665)
+        .attr("cy", 50)
+        .attr("r", 20)
+        .attr("class", "bwc-cloud");
+
+    cloudGroup.append("circle")
+        .attr("cx", 635)
+        .attr("cy", 30)
+        .attr("r", 20)
+        .attr("class", "bwc-cloud");
+
+    cloudGroup.append("circle")
+        .attr("cx", 635)
+        .attr("cy", 50)
+        .attr("r", 20)
+        .attr("class", "bwc-cloud");
+
+    cloudGroup.append("circle")
+        .attr("cx", 160)
+        .attr("cy", 40)
+        .attr("r", 20)
+        .attr("class", "bwc-cloud");
+
+    cloudGroup.append("circle")
+        .attr("cx", 80)
+        .attr("cy", 40)
+        .attr("r", 20)
+        .attr("class", "bwc-cloud");
+
+    cloudGroup.append("circle")
+        .attr("cx", 105)
+        .attr("cy", 30)
+        .attr("r", 20)
+        .attr("class", "bwc-cloud");
+
+    cloudGroup.append("circle")
+        .attr("cx", 105)
+        .attr("cy", 50)
+        .attr("r", 20)
+        .attr("class", "bwc-cloud");
+
+    cloudGroup.append("circle")
+        .attr("cx", 135)
+        .attr("cy", 30)
+        .attr("r", 20)
+        .attr("class", "bwc-cloud");
+
+    cloudGroup.append("circle")
+        .attr("cx", 135)
+        .attr("cy", 50)
+        .attr("r", 20)
+        .attr("class", "bwc-cloud");
+
+    cloudGroup.append("circle")
+        .attr("cx", 415)
+        .attr("cy", 100)
+        .attr("r", 20)
+        .attr("class", "bwc-cloud");
+
+    cloudGroup.append("circle")
+        .attr("cx", 910)
+        .attr("cy", 80)
+        .attr("r", 20)
+        .attr("class", "bwc-cloud");
+
+    cloudGroup.append("circle")
+        .attr("cx", 990)
+        .attr("cy", 80)
+        .attr("r", 20)
+        .attr("class", "bwc-cloud");
+
+    cloudGroup.append("circle")
+        .attr("cx", 965)
+        .attr("cy", 70)
+        .attr("r", 20)
+        .attr("class", "bwc-cloud");
+
+    cloudGroup.append("circle")
+        .attr("cx", 965)
+        .attr("cy", 90)
+        .attr("r", 20)
+        .attr("class", "bwc-cloud");
+
+    cloudGroup.append("circle")
+        .attr("cx", 935)
+        .attr("cy", 70)
+        .attr("r", 20)
+        .attr("class", "bwc-cloud");
+
+    cloudGroup.append("circle")
+        .attr("cx", 935)
+        .attr("cy", 90)
+        .attr("r", 20)
+        .attr("class", "bwc-cloud");
+
+    cloudGroup.append("circle")
+        .attr("cx", 1110)
+        .attr("cy", 40)
+        .attr("r", 20)
+        .attr("class", "bwc-cloud");
+
+    cloudGroup.append("circle")
+        .attr("cx", 1190)
+        .attr("cy", 40)
+        .attr("r", 20)
+        .attr("class", "bwc-cloud");
+
+    cloudGroup.append("circle")
+        .attr("cx", 1165)
+        .attr("cy", 30)
+        .attr("r", 20)
+        .attr("class", "bwc-cloud");
+
+    cloudGroup.append("circle")
+        .attr("cx", 1165)
+        .attr("cy", 50)
+        .attr("r", 20)
+        .attr("class", "bwc-cloud");
+
+    cloudGroup.append("circle")
+        .attr("cx", 1135)
+        .attr("cy", 30)
+        .attr("r", 20)
+        .attr("class", "bwc-cloud");
+
+    cloudGroup.append("circle")
+        .attr("cx", 1135)
+        .attr("cy", 50)
+        .attr("r", 20)
+        .attr("class", "bwc-cloud");
 
     // Start animations when the window loads
     //window.onload = startAnimations;
 
   }, []);
 
-  return <div className="before-war-chart">
-  <h1 className="chart-title">Water Intake from the West Bank Aquifer </h1>
-  <svg ref={svgRef} width="1400" height="625"></svg>
-  <button onClick={() => startAnimationsRef.current()}>Water Intake</button>
-</div>
+  return (
+    <div className="before-war-chart">
+      <h1 className="bwc-title">Water Intake from the West Bank Aquifer</h1>
+      <svg ref={svgRef} width="1400" height="625"></svg>
+      <button className="bwc-button" onClick={() => startAnimationsRef.current()}>Water Intake</button>
+    </div>
+  );
 };
 
 export default BeforeWarChart;

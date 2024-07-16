@@ -1,0 +1,28 @@
+/* Ensure the .content div can adapt to different screen sizes */
+.content {
+    padding: 15px;
+  }
+  
+  .card-chart {
+    margin-bottom: 15px;
+  }
+  
+  .card-body {
+    overflow: hidden;
+  }
+  
+  /* Responsive text alignment and sizing */
+  @media (max-width: 768px) {
+    .card-body {
+      text-align: center;
+    }
+  
+    h2 {
+      font-size: 1.2rem;
+    }
+  
+    h3 {
+      font-size: 1.1rem;
+    }
+  }
+  
