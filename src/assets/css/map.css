@@ -1,68 +1,126 @@
 .gray-background {
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    color: white;
-  }
-  
-  .map-paragraph {
-    font-size: 1.3em;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .map-title {
-    color: #007bff; /* Blue heading */
-    font-weight: bold; /* Bold text */
-    font-size: 2em; /* Adjust size as necessary to match */
-    margin: 0;
-  }
-  
-  .map-card {
-    background-color: #1f1f2e; /* Card background color */
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: white;
-  }
-  
-  @keyframes fadeIn {
-    from {
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.map-paragraph {
+  font-size: 1.3em;
+  font-family: 'Arial', sans-serif;
+}
+
+.map-title {
+  color: #007bff; /* Blue heading */
+  font-weight: bold; /* Bold text */
+  font-size: 2em; /* Adjust size as necessary to match */
+  margin: 0;
+}
+
+.map-card {
+  background-color: #1f1f2e; /* Card background color */
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+@keyframes fadeIn {
+  from {
       opacity: 0;
       transform: translateY(20px);
-    }
-    to {
+  }
+  to {
       opacity: 1;
       transform: translateY(0);
-    }
   }
-  
+}
+
+.event-section-map {
+  background: #f8f9fa00; /* Light grey background for readability */
+  padding: 20px; /* Inner padding */
+  border-radius: 10px; /* Rounded corners */
+  margin-bottom: 20px; /* Space between sections */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: background-color 0.3s ease;
+  opacity: 0; /* Start hidden */
+  animation: fadeIn 1s forwards; /* Apply the animation */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.event-section-map:hover {
+  background: #2887e62d; /* Slightly darker background for contrast */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+  transform: translateY(-5px); /* Slight upward movement */
+}
+
+.map-card .event-section-map h3 {
+  margin-top: 0;
+  color: #007bff; /* Matching title color */
+  font-weight: bold; /* Matching title font weight */
+  font-size: 1.5em; /* Matching title size */
+}
+
+.event-section-map p {
+  color: #ccc;
+  font-size: 1.1em; /* Matching text size */
+}
+
+@media (max-width: 768px) {
+  .map-paragraph {
+      font-size: 1em;
+  }
+
+  .map-title {
+      font-size: 1.5em;
+  }
+
   .event-section-map {
-    background: #f8f9fa00; /* Light grey background for readability */
-    padding: 20px; /* Inner padding */
-    border-radius: 10px; /* Rounded corners */
-    margin-bottom: 20px; /* Space between sections */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: background-color 0.3s ease;
-    opacity: 0; /* Start hidden */
-    animation: fadeIn 1s forwards; /* Apply the animation */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+      padding: 10px;
   }
-  
-  .event-section-map:hover {
-    background: #2887e62d; /* Slightly darker background for contrast */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow */
-    transform: translateY(-5px); /* Slight upward movement */
+
+  #chart-container {
+      flex-direction: column;
   }
-  
-  .map-card .event-section-map h3 {
-    margin-top: 0;
-    color: #007bff; /* Matching title color */
-    font-weight: bold; /* Matching title font weight */
-    font-size: 1.5em; /* Matching title size */
+
+  #map, #barChart {
+      width: 100%;
+      height: auto;
   }
-  
+
+  #legend {
+      margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-title {
+      font-size: 1.2em;
+  }
+
+  .map-paragraph {
+      font-size: 0.9em;
+  }
+
   .event-section-map p {
-    color: #ccc;
-    font-size: 1.1em; /* Matching text size */
+      font-size: 1em;
   }
-  
+
+  .event-section-map h3 {
+      font-size: 1.2em;
+  }
+
+  #chart-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  #map, #barChart {
+      width: 100%;
+      height: auto;
+  }
+
+  #legend {
+      margin-top: 10px;
+  }
+}

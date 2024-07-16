@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>404 Not Found</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript">
+        var segmentCount = 1; // Change to 0 if deploying at the root
+        var locationSegments = window.location.pathname.split('/').slice(segmentCount);
+        var locationPath = locationSegments.join('/');
+        var searchParams = window.location.search.replace(/^\?/, '&');
+        var hashParams = window.location.hash;
+        var newLocation = '/DataViz-website?' + locationPath + searchParams + hashParams;
+        window.location.replace(newLocation);
+    </script>
+</head>
+<body>
+</body>
+</html>

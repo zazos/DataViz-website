@@ -54,3 +54,18 @@
     align-items: center;
     margin-bottom: 1rem;
 }
+
+@media (max-width: 768px) {
+  .team-card-title {
+    font-size: 1.2em;
+  }
+
+  .our-team-title {
+    font-size: 2rem;
+  }
+
+  .image-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+}

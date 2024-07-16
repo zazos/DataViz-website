@@ -1,10 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
 import '../assets/css/ComparisonBarChart.css';
 
 const ComparisonBarChart = ({ palestineCsvFilePath, europeanCsvFilePath, conversionRate, selectedMonth }) => {
   const svgRef = useRef();
   const titleRef = useRef();
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const commodityCategories = {
     'rice (1 kg)': 'Staple Foods',
@@ -56,15 +57,15 @@ const ComparisonBarChart = ({ palestineCsvFilePath, europeanCsvFilePath, convers
 
   useEffect(() => {
     const margin = { top: 50, right: 135, bottom: 60, left: 205 };
-    const width = 1200 - margin.left - margin.right;
+    const width = windowWidth - margin.left - margin.right;
     const height = 600 - margin.top - margin.bottom;
 
     // Clear the previous SVG content
     d3.select(svgRef.current).selectAll('*').remove();
 
     const svg = d3.select(svgRef.current)
-      .attr('width', width + margin.left + margin.right)
-      .attr('height', height + margin.top + margin.bottom)
+      .attr('viewBox', `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+      .attr('preserveAspectRatio', 'xMidYMid meet')
       .append('g')
       .attr('transform', `translate(${margin.left},${margin.top})`);
 
@@ -270,6 +271,17 @@ const ComparisonBarChart = ({ palestineCsvFilePath, europeanCsvFilePath, convers
     }).catch(error => {
       console.error("Error loading Palestine data:", error);
     });
+
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+
   }, [palestineCsvFilePath, europeanCsvFilePath, conversionRate, selectedMonth]);
 
   return (

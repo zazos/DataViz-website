@@ -75,3 +75,25 @@
   margin-right: 10px;
   font-size: 1.5em;
 }
+
+@media (max-width: 768px) {
+  .custom-content {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .content-row {
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .abstract-card, .video-card, .target-audience-card, .reasons-card {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .custom-image-text {
+    font-size: 20vw;
+  }
+}

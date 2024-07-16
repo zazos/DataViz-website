@@ -5,7 +5,7 @@ import plotly.io as pio
 import numpy as np
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+CORS(app, resources={r"/*": {"origins": "*"}})  # Allow all origins
 
 @app.route('/plot')
 def plot():

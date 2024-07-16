@@ -1,8 +1,8 @@
 {
-  "name": "black-dashboard-react",
+  "name": "DataViz-website",
   "version": "1.2.2",
   "private": true,
-  "homepage": "http://zazos.github.io/DataViz-website",
+  "homepage": "https://zazos.github.io/DataViz-website",
   "dependencies": {
     "@fortawesome/fontawesome-free": "6.4.0",
     "ajv": "^6.12.6",
@@ -60,6 +60,7 @@
     "reactstrap": "^8.10.1"
   },
   "devDependencies": {
+    "@flydotio/dockerfile": "^0.5.7",
     "gh-pages": "^6.1.1",
     "typescript": "5.0.4"
   },
