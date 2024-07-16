@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/DataViz-website/static/css/main.9f3beb48.css",
-    "main.js": "/DataViz-website/static/js/main.1e626a44.js",
+    "main.js": "/DataViz-website/static/js/main.e81e686c.js",
     "static/media/panagiotis-zazos.jpeg": "/DataViz-website/static/media/panagiotis-zazos.746c79aec5a6d1598ef7.jpeg",
     "static/media/fa-solid-900.ttf": "/DataViz-website/static/media/fa-solid-900.4a2cd718d7031b732e76.ttf",
     "static/media/fa-brands-400.ttf": "/DataViz-website/static/media/fa-brands-400.150de8eaa454d669c405.ttf",
@@ -24,10 +24,10 @@
     "static/media/european-commodity-prices.csv": "/DataViz-website/static/media/european-commodity-prices.7ee8341768d6edd18f2f.csv",
     "index.html": "/DataViz-website/index.html",
     "main.9f3beb48.css.map": "/DataViz-website/static/css/main.9f3beb48.css.map",
-    "main.1e626a44.js.map": "/DataViz-website/static/js/main.1e626a44.js.map"
+    "main.e81e686c.js.map": "/DataViz-website/static/js/main.e81e686c.js.map"
   },
   "entrypoints": [
     "static/css/main.9f3beb48.css",
-    "static/js/main.1e626a44.js"
+    "static/js/main.e81e686c.js"
   ]
 }
