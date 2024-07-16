@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/DataViz-website/static/css/main.b75a170a.css",
-    "main.js": "/DataViz-website/static/js/main.b29204ef.js",
+    "main.css": "/DataViz-website/static/css/main.9f3beb48.css",
+    "main.js": "/DataViz-website/static/js/main.1e626a44.js",
     "static/media/panagiotis-zazos.jpeg": "/DataViz-website/static/media/panagiotis-zazos.746c79aec5a6d1598ef7.jpeg",
     "static/media/fa-solid-900.ttf": "/DataViz-website/static/media/fa-solid-900.4a2cd718d7031b732e76.ttf",
     "static/media/fa-brands-400.ttf": "/DataViz-website/static/media/fa-brands-400.150de8eaa454d669c405.ttf",
@@ -18,16 +18,16 @@
     "static/media/nucleo.woff": "/DataViz-website/static/media/nucleo.5c65ef4d6434bb8062a3.woff",
     "static/media/nucleo.woff2": "/DataViz-website/static/media/nucleo.6dfb4833e3a0132fd1fc.woff2",
     "static/media/fa-v4compatibility.ttf": "/DataViz-website/static/media/fa-v4compatibility.0e3a648be390bd8cb094.ttf",
-    "static/media/commodity-prices.csv": "/DataViz-website/static/media/commodity-prices.7d324cbc73ceb2410c76.csv",
-    "static/media/sorted_aggregated_events_fatalities_per_year_with_coordinates.csv": "/DataViz-website/static/media/sorted_aggregated_events_fatalities_per_year_with_coordinates.3a26853907e28c4f4365.csv",
+    "static/media/commodity-prices.csv": "/DataViz-website/static/media/commodity-prices.79aad6446735f7d1ff24.csv",
     "static/media/fa-v4compatibility.woff2": "/DataViz-website/static/media/fa-v4compatibility.68577e40f3e70067b5da.woff2",
+    "static/media/sorted_aggregated_events_fatalities_per_year_with_coordinates.csv": "/DataViz-website/static/media/sorted_aggregated_events_fatalities_per_year_with_coordinates.37edea90f32ba822235b.csv",
     "static/media/european-commodity-prices.csv": "/DataViz-website/static/media/european-commodity-prices.7ee8341768d6edd18f2f.csv",
     "index.html": "/DataViz-website/index.html",
-    "main.b75a170a.css.map": "/DataViz-website/static/css/main.b75a170a.css.map",
-    "main.b29204ef.js.map": "/DataViz-website/static/js/main.b29204ef.js.map"
+    "main.9f3beb48.css.map": "/DataViz-website/static/css/main.9f3beb48.css.map",
+    "main.1e626a44.js.map": "/DataViz-website/static/js/main.1e626a44.js.map"
   },
   "entrypoints": [
-    "static/css/main.b75a170a.css",
-    "static/js/main.b29204ef.js"
+    "static/css/main.9f3beb48.css",
+    "static/js/main.1e626a44.js"
   ]
 }
