@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/DataViz-website/static/css/main.dbfb9ec0.css",
-    "main.js": "/DataViz-website/static/js/main.eb83cd77.js",
+    "main.css": "/DataViz-website/static/css/main.b75a170a.css",
+    "main.js": "/DataViz-website/static/js/main.b29204ef.js",
     "static/media/panagiotis-zazos.jpeg": "/DataViz-website/static/media/panagiotis-zazos.746c79aec5a6d1598ef7.jpeg",
     "static/media/fa-solid-900.ttf": "/DataViz-website/static/media/fa-solid-900.4a2cd718d7031b732e76.ttf",
     "static/media/fa-brands-400.ttf": "/DataViz-website/static/media/fa-brands-400.150de8eaa454d669c405.ttf",
@@ -23,11 +23,11 @@
     "static/media/fa-v4compatibility.woff2": "/DataViz-website/static/media/fa-v4compatibility.68577e40f3e70067b5da.woff2",
     "static/media/european-commodity-prices.csv": "/DataViz-website/static/media/european-commodity-prices.7ee8341768d6edd18f2f.csv",
     "index.html": "/DataViz-website/index.html",
-    "main.dbfb9ec0.css.map": "/DataViz-website/static/css/main.dbfb9ec0.css.map",
-    "main.eb83cd77.js.map": "/DataViz-website/static/js/main.eb83cd77.js.map"
+    "main.b75a170a.css.map": "/DataViz-website/static/css/main.b75a170a.css.map",
+    "main.b29204ef.js.map": "/DataViz-website/static/js/main.b29204ef.js.map"
   },
   "entrypoints": [
-    "static/css/main.dbfb9ec0.css",
-    "static/js/main.eb83cd77.js"
+    "static/css/main.b75a170a.css",
+    "static/js/main.b29204ef.js"
   ]
 }
