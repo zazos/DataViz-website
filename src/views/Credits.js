@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from 'react-helmet';
 import "../assets/css/credits.css";
 import { Card, CardBody, Row, Col } from "reactstrap";
 
@@ -7,6 +8,9 @@ const linkedInLogo = "https://upload.wikimedia.org/wikipedia/commons/c/ca/Linked
 function Credits() {
   return (
     <>
+      <Helmet>
+        <title>Credits</title>
+      </Helmet>
       <div className="custom-content">
         <div className="custom-image-text">
           #FreePalestine

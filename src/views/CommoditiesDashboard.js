@@ -5,6 +5,7 @@ import ComparisonBarChart from '../components/ComparisonBarChart.js';
 import commodityPrices from '../commodity-prices.csv';
 import europeanCommodityPrices from '../european-commodity-prices.csv';
 import '../assets/css/event-section-commodities.css';
+import { Helmet } from 'react-helmet';
 
 function CommoditiesDashboard(props) {
   const [raceMonth, setRaceMonth] = useState('Sep-23');
@@ -50,6 +51,9 @@ function CommoditiesDashboard(props) {
 
   return (
     <>
+      <Helmet>
+        <title>Commodity Prices</title>
+      </Helmet>
       <div className="content">
         <Row>
           <Col xs="12">

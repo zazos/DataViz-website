@@ -5,6 +5,7 @@ import * as d3 from 'd3';
 import { Row, Col, Card, CardBody, Button, ButtonGroup, CardTitle } from 'reactstrap';
 import EventsFatalities from '../sorted_aggregated_events_fatalities_per_year_with_coordinates.csv';
 import '../assets/css/map.css'; // Import the new CSS file
+import { Helmet } from 'react-helmet';
 
 const MapWrapper = () => {
     const [selectedYear, setSelectedYear] = useState(null);
@@ -65,22 +66,22 @@ const MapWrapper = () => {
             barMargin = { top: 20, right: 20, bottom: 100, left: 40 },
             barWidth = +barSvg.attr('width') - barMargin.left - barMargin.right,
             barHeight = +barSvg.attr('height') - barMargin.top - barMargin.bottom;
-    
+
         barSvg.selectAll('*').remove();
-    
+
         const barG = barSvg.append('g').attr('transform', `translate(${barMargin.left},${barMargin.top})`);
-    
+
         const x0 = d3.scaleBand().rangeRound([0, barWidth]).padding(0.1),
             x1 = d3.scaleBand().padding(0.05),
             y = d3.scaleLinear().rangeRound([barHeight, 0]);
-    
+
         const regions = yearData.map(d => d.Region);
         const categories = ['Events', 'Fatalities'];
-    
+
         x0.domain(regions);
         x1.domain(categories).rangeRound([0, x0.bandwidth()]);
         y.domain([0, d3.max(yearData, d => Math.max(d.Events, d.Fatalities))]);
-    
+
         barG
             .append('g')
             .attr('class', 'axis')
@@ -92,20 +93,20 @@ const MapWrapper = () => {
             .attr('dx', '-.8em')
             .attr('dy', '.15em')
             .attr('transform', 'rotate(-65)');
-    
+
         barG.append('g')
             .attr('class', 'axis')
             .call(d3.axisLeft(y).ticks(10))
             .selectAll('text')
             .style('fill', 'white');
-    
+
         const region = barG
             .selectAll('.region')
             .data(yearData)
             .enter()
             .append('g')
             .attr('transform', d => `translate(${x0(d.Region)},0)`);
-    
+
         region
             .selectAll('rect')
             .data(d => categories.map(key => ({ key, value: d[key] })))
@@ -116,7 +117,7 @@ const MapWrapper = () => {
             .attr('width', x1.bandwidth())
             .attr('height', d => barHeight - y(d.value))
             .attr('fill', d => (d.key === 'Events' ? 'rgba(244, 204, 66, 0.7)' : 'rgb(139, 0, 0)'));
-    
+
         const legend = barG
             .selectAll('.legend')
             .data(categories)
@@ -124,14 +125,14 @@ const MapWrapper = () => {
             .append('g')
             .attr('class', 'legend')
             .attr('transform', (d, i) => `translate(0,${i * 20})`);
-    
+
         legend
             .append('rect')
             .attr('x', barWidth - 18)
             .attr('width', 18)
             .attr('height', 18)
             .style('fill', d => (d === 'Events' ? 'rgba(244, 204, 66, 0.7)' : 'rgb(139, 0, 0)'));
-    
+
         legend
             .append('text')
             .attr('x', barWidth - 24)
@@ -140,7 +141,7 @@ const MapWrapper = () => {
             .style('text-anchor', 'end')
             .style('fill', 'white')
             .text(d => d);
-    
+
         // Adjust legend for small screens
         if (windowWidth < 768) {
             legend.select('text')
@@ -148,16 +149,16 @@ const MapWrapper = () => {
                 .style('text-anchor', 'start');
         }
     };
-    
+
     const updateMap = (yearData) => {
         if (layerGroupRef.current) {
             layerGroupRef.current.clearLayers();
         } else {
             layerGroupRef.current = L.layerGroup().addTo(mapRef.current);
         }
-    
+
         const colorScale = d3.scaleThreshold().domain([1, 10, 20, 50]).range(['green', '#f7dc6f', '#f39c12', '#e74c3c', '#c0392b']);
-    
+
         yearData.forEach(d => {
             L.circleMarker([d.latitude, d.longitude], {
                 radius: 5,
@@ -170,7 +171,7 @@ const MapWrapper = () => {
                 .addTo(layerGroupRef.current)
                 .bindPopup(`${d.Region}<br>Events: ${d.Events}<br>Fatalities: ${d.Fatalities}`);
         });
-    
+
         const legend = d3.select('#legend')
             .html("")
             .append('svg')
@@ -185,12 +186,12 @@ const MapWrapper = () => {
             .enter()
             .append('g')
             .attr('transform', (d, i) => `translate(0,${i * 20})`);
-    
+
         legend.append('rect')
             .attr('width', 18)
             .attr('height', 18)
             .style('fill', d => colorScale(d[0]));
-    
+
         legend.append('text')
             .attr('x', 24)
             .attr('y', 9)
@@ -201,7 +202,7 @@ const MapWrapper = () => {
                 if (d[1] > 50) return '50+ deaths';
                 return `${d[0]}-${d[1]} deaths`;
             });
-    
+
         // Adjust legend for small screens
         if (windowWidth < 768) {
             legend.select('text')
@@ -270,6 +271,9 @@ const InfoCard = () => {
 
     return (
         <Card className="map-card">
+            <Helmet>
+                <title>Most Significant Attacks</title>
+            </Helmet>
             <CardBody>
                 <CardTitle tag="h2" className="map-title">Most Significant Attacks</CardTitle>
                 <h5 className="card-category" style={{ marginTop: '10px' }}>source: <a href="https://www.history.com/topics/middle-east/palestine">History</a></h5>

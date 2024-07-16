@@ -1,10 +1,14 @@
 import React from "react";
+import { Helmet } from 'react-helmet';
 import { Card, CardHeader, CardBody, CardTitle, Row, Col } from "reactstrap";
 import "../assets/css/home.css"; // Import the custom CSS file with unique names
 
 function Home() {
   return (
     <>
+      <Helmet>
+        <title>Home</title>
+      </Helmet>
       <div className="custom-content">
         <div className="custom-home-header">
           Visualizing the Humanitarian Crisis in Palestine
