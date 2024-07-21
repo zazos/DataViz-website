@@ -1,4 +1,4 @@
-# Data Visualization of the Palestinian Conflicts and Humanitarian Crisis (October 2023 - April 2024)
+# Data Visualization of the Palestinian Conflicts and Humanitarian Crisis
 
 ## Abstract
 
